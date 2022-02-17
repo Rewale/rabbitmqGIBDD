@@ -1182,3 +1182,105 @@
 [2022-02-07T14:59:13.348759+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
 [2022-02-07T14:59:13.934146+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 14
 [2022-02-07T14:59:13.934146+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 14
+[2022-02-07T15:16:22.549309+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:16:22.549309+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:16:22.586668+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:16:22.586668+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:16:22.586909+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:16:22.586909+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:16:23.085071+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:16:23.085071+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:16:34.056231+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:16:34.056231+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:16:34.714828+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:16:34.714828+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:16:37.401845+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:16:37.401845+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:16:37.402051+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-07 15:16:37.402037.jpg
+[2022-02-07T15:16:37.402051+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-07 15:16:37.402037.jpg
+[2022-02-07T15:20:58.584860+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:20:58.584860+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:20:58.625758+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:20:58.625758+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:20:58.626004+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:20:58.626004+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:20:59.084351+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:20:59.084351+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:21:03.922993+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:21:03.922993+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:21:03.923247+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:21:03.923224.jpg
+[2022-02-07T15:21:03.923247+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:21:03.923224.jpg
+[2022-02-07T15:21:03.981728+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:21:03.981728+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:21:04.076186+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:21:04.076186+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:21:04.076435+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:21:04.076425.jpg
+[2022-02-07T15:21:04.076435+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:21:04.076425.jpg
+[2022-02-07T15:21:04.093776+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:21:04.093776+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:22:01.142058+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:22:01.142058+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:22:01.162924+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:22:01.162924+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:22:01.163195+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:22:01.163195+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:22:01.640224+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:22:01.640224+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:22:12.597038+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:22:12.597038+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:22:13.226053+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:22:13.226053+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:22:15.876130+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:22:15.876130+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:22:15.876354+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:22:15.876342.jpg
+[2022-02-07T15:22:15.876354+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:22:15.876342.jpg
+[2022-02-07T15:22:15.946376+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:22:15.946376+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:22:16.039465+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:22:16.039465+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:22:16.039720+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:22:16.039709.jpg
+[2022-02-07T15:22:16.039720+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:22:16.039709.jpg
+[2022-02-07T15:22:16.098015+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:22:16.098015+0500 INFO [ACCIDENT-I] Ошибка отправки изображения: 'bytes' object is not callable
+[2022-02-07T15:22:54.697594+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:22:54.697594+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:22:54.727936+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:22:54.727936+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:22:54.728163+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:22:54.728163+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:22:55.212380+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:22:55.212380+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:22:55.672878+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:22:55.672878+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:22:55.993095+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:22:55.993095+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:22:56.606811+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:22:56.606811+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:22:59.338832+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:22:59.338832+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:22:59.339116+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:22:59.339077.jpg
+[2022-02-07T15:22:59.339116+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.2.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:22:59.339077.jpg
+[2022-02-07T15:26:19.880372+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:26:19.880372+0500 INFO Отправка кода в input_field 
+[2022-02-07T15:26:19.926971+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:26:19.926971+0500 INFO Ввод VIN кода: XWKFB227390094336
+[2022-02-07T15:26:19.927205+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:26:19.927205+0500 INFO [ACCIDENT]Старт получения данных о ДТП
+[2022-02-07T15:26:20.463771+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:26:20.463771+0500 INFO [ACCIDENT-BUTTON]Кнопка нажата
+[2022-02-07T15:26:31.254794+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:26:31.254794+0500 INFO [ACCIDENT-DATA] Поднятие ошибки NoSuchElementException
+[2022-02-07T15:26:31.894605+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:26:31.894605+0500 INFO [ACCIDENT-DATA] Элемент не найден, итерация: 1
+[2022-02-07T15:26:34.610460+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:26:34.610460+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:26:34.610710+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.0.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:26:34.610665.jpg
+[2022-02-07T15:26:34.610710+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.0.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:26:34.610665.jpg
+[2022-02-07T15:26:34.699631+0500 INFO [ACCIDENT-I] UUID изображения на сервисе a53404f8-3303-4b2e-9be3-1b2f036a3918
+[2022-02-07T15:26:34.699631+0500 INFO [ACCIDENT-I] UUID изображения на сервисе a53404f8-3303-4b2e-9be3-1b2f036a3918
+[2022-02-07T15:26:34.792721+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:26:34.792721+0500 INFO [ACCIDENT-I] Получение изображений ДТП
+[2022-02-07T15:26:34.792954+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.0.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:26:34.792944.jpg
+[2022-02-07T15:26:34.792954+0500 INFO [ACCIDENT-I] Отправка изображения в сервис http://192.168.0.7/filesprogr/index.php?operation=write&extension=png&author=parserGIBDD&typedoc=2&filename=2022-02-0715:26:34.792944.jpg
+[2022-02-07T15:26:34.866913+0500 INFO [ACCIDENT-I] UUID изображения на сервисе b9f2342d-270c-4dda-adf6-1b3499e4a8d3
+[2022-02-07T15:26:34.866913+0500 INFO [ACCIDENT-I] UUID изображения на сервисе b9f2342d-270c-4dda-adf6-1b3499e4a8d3

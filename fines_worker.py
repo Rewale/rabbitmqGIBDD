@@ -9,7 +9,7 @@ from utils.custom_exceptions import ProxyError
 
 from utils.validations import validate_sts, ValidationSTSError
 from penalty_parser import BotParserPenalty
-from loggers import requests_logger
+from utils.loggers import requests_logger
 
 requests_logger.info('[INIT] Начало инициализации кролика и парсера')
 connection = pika.BlockingConnection(pika.ConnectionParameters(

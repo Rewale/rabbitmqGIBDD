@@ -73,8 +73,8 @@ class BotParser:
         # путь для расширений Firefox
 
         # extensions_path = './firefox_addons/'
-        extensions_path = str(Path().parent.absolute().parent.absolute()) + \
-                          '/gibdd_parser/gibdd_parser/firefox_addons/'  # заменить
+        extensions_path = '/home/kolchanovaa/Рабочий стол/parsers/parser-gibdd-docker/rabbitMQ' + \
+                          '/firefox_addons/'  # заменить
 
         # parser_logger.info("[Инициализация] Полученный код: %s" % self.code)
 
@@ -199,13 +199,18 @@ class BotParser:
         import base64
 
         parser_logger.info("[ACCIDENT-I] Получение изображений ДТП")
-        filename = str(datetime.datetime.now()) + '.jpg'
+        filename = str(datetime.datetime.now()).replace(' ','') + '.jpg'
         url = FILES_1C % (filename, )
         parser_logger.info(f"[ACCIDENT-I] Отправка изображения в сервис {url}")
         image_element = data_block.find_element_by_tag_name('tbody')
-        screenshot_as_bytes: bytes = image_element.screenshot_as_png()
-        screenshot_as_base64 = base64.b64encode(screenshot_as_bytes)
-        image_uuid = requests.post(url, data=screenshot_as_base64).text
+        try:
+            screenshot_as_bytes = image_element.screenshot_as_png
+            screenshot_as_base64 = base64.b64encode(screenshot_as_bytes)
+            image_uuid = requests.post(url, data=screenshot_as_base64).text
+        except Exception as e:
+            parser_logger.info(f"[ACCIDENT-I] Ошибка отправки изображения: {str(e)}")
+            return "error"
+
         parser_logger.info(f"[ACCIDENT-I] UUID изображения на сервисе {image_uuid}")
         return image_uuid
 
@@ -751,7 +756,7 @@ class BotParser:
     def __del__(self):
 
         """ При удалении экземпляра класса закрывает соединение с selenium """
-
+        parser_logger.info("[DEL] Удаление экземпляра воркера")
         self.driver.quit()
 
     def clear_page(self):

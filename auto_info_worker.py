@@ -1,17 +1,25 @@
-#!/usr/bin/env python
+import sys
+import uuid
+
 from datetime import datetime
 
 import pika
 import json
+import signal
 
 from selenium.common.exceptions import TimeoutException, UnexpectedAlertPresentException
+
+from utils.system_utils import GracefulKiller
 from utils.custom_exceptions import ProxyError
 
 from utils.validations import validate_sts, ValidationSTSError
 from parsers import BotParser
-from loggers import requests_logger
+from utils.loggers import requests_logger
 
-requests_logger.info('[INIT] Начало инициализации кролика и парсера')
+requests_logger.info(f'[INIT] Cтарт {datetime.now()}')
+
+WORKER_UUID = uuid.uuid4()
+requests_logger.info(f'[INIT] Начало инициализации кролика и парсера {WORKER_UUID=}')
 connection = pika.BlockingConnection(pika.ConnectionParameters(
     host='localhost'))
 
@@ -20,6 +28,17 @@ channel.queue_declare(queue='auto_info_parsed_data')
 channel.queue_declare(queue='auto_info_parsing')
 
 parser = BotParser()
+k = GracefulKiller()
+
+
+def on_exit():
+    requests_logger.info(f"[EXIT] Kill {WORKER_UUID=}")
+    parser.driver.quit()
+    sys.exit(0)
+
+
+# Действие при выходе
+k.exit_gracefully = on_exit
 
 
 def parse(vin_code: str, method: str = 'all'):
@@ -51,7 +70,7 @@ def parse(vin_code: str, method: str = 'all'):
 
 
 def on_request(ch, method, props, body):
-    requests_logger.info(" [OR] body(%s)" % (body.decode('utf-8'),))
+    requests_logger.info(f" [OR] body(%s) {WORKER_UUID=}" % (body.decode('utf-8'),))
     data = json.loads(body.decode('utf-8'))
     vin_code, method_parse, uuid = '', '', ''
     try:
@@ -59,13 +78,13 @@ def on_request(ch, method, props, body):
         method_parse = data['method']
         uuid = data['uuid']
     except KeyError as ex:
+        error = {'result': 'Fail', 'data': {'error': f'key {str(ex)} not found'}}
+        requests_logger.info(f" [OR] Wrong request {error=} {WORKER_UUID=}")
         ch.basic_publish(exchange='',
                          routing_key='auto_info_parsed_data',
-                         body=str({'result': 'Fail', 'data': {'error': f'key {str(ex)} not found'}}))
+                         body=str(error))
         ch.basic_ack(delivery_tag=method.delivery_tag)
         return
-
-    requests_logger.info(" [OR] data(%s)" % (data,))
 
     response = parse(vin_code=vin_code, method=method_parse)
     response['uuid'] = uuid
@@ -74,13 +93,12 @@ def on_request(ch, method, props, body):
                      body=str(response))
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
-    requests_logger.info(" [Server] response(%s)" % (response,))
+    requests_logger.info(f" [Server] response(%s) {WORKER_UUID=}" % (response,))
     parser.clear_page()
-    requests_logger.info(" [Server] cleaned page!")
+    requests_logger.info(f" [Server] cleaned page! {WORKER_UUID=}")
 
 
-# channel.basic_qos(prefetch_count=1)
 channel.basic_consume(on_message_callback=on_request, queue='auto_info_parsing')
 
-requests_logger.info("[Server] Awaiting RPC requests")
+requests_logger.info(f"[Server] Awaiting RPC requests {WORKER_UUID=}")
 channel.start_consuming()

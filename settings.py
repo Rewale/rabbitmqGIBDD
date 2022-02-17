@@ -23,10 +23,10 @@ RELOAD = True
 # ?operation=write&extension=" + Строка(РасширениеФайла + "&author=" + Строка(Автор) + "&typedoc=" + Строка(ВидФайла)
 # + "&filename=" + Строка(ИмяФайла)
 if DEBUG:
-    FILES_1C = 'http://192.168.2.7/filesprogr/index.php?operation=write' \
+    FILES_1C = 'http://192.168.0.7/filesprogr/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
 else:
-    FILES_1C = 'http://192.168.2.7/files/index.php?operation=write' \
+    FILES_1C = 'http://192.168.0.7/files/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
 ITERATIONS = 120
 

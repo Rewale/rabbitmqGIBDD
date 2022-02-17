@@ -2,7 +2,7 @@ from datetime import datetime
 from time import sleep
 
 import pika
-from loggers import requests_logger
+from utils.loggers import requests_logger
 
 requests_logger.info('[INIT] Начало инициализации кролика и парсера')
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -17,7 +17,7 @@ channel.queue_declare(queue='fines_parsing')
 def on_request(ch, method, props, body):
     requests_logger.info(" [OR] body(%s)" % (body.decode('utf-8'),))
     response = str(datetime.now())*75
-    sleep(1.5)
+    sleep(1/30)
     ch.basic_publish(exchange='',
                      routing_key='fines_parsed_data',
                      body=response)

@@ -1,10 +1,9 @@
-#!/usr/bin/env python
 import pika
 import uuid
 import json
 import sys
 
-from loggers import requests_logger
+from utils.loggers import requests_logger
 
 
 class ParserRpcClient(object):

@@ -46,7 +46,7 @@ from seleniumwire import webdriver
 # from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
 # from utils.loggers import parser_logger
 # from utils.work_with_proxy import read_proxy_json
-from loggers import parser_logger
+from utils.loggers import parser_logger
 
 URL = 'https://гибдд.рф/check/fines#++'
 
