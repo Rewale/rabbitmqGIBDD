@@ -1,7 +1,12 @@
 from pathlib import Path
 import socket
-
 import utils.system_utils
+
+# API rabbit
+URL_API = ''
+PASS_API = ''
+USER_API = ''
+SERVICE_NAME = 'GIBGG'
 
 URL = 'https://гибдд.рф/check/fines#++'
 
@@ -37,7 +42,6 @@ ITERATIONS = 15
 # лимит поиска результата
 SEARCH_LIMIT_SEC = 20
 
-
 ALLOWED_IP_LIST = [
     '0.0.0.0',
     '192.168.0.200',
@@ -55,15 +59,13 @@ ALLOWED_IP_LIST = [
     '192.168.0.216',
 ]
 
-
 if DOCKER:
     HOST = '0.0.0.0'
     extensions_path = str(Path().parent.absolute()) + '/gibdd_parser/firefox_addons/'
     ALLOWED_IP_LIST.append(str(socket.gethostbyname('cronjobs')))  # автотесты
 
-
 english_names = {
-    'Дата и время происшествия':  'date',
+    'Дата и время происшествия': 'date',
     'Тип происшествия': 'incedent_type',
     'Регион происшествия': 'region',
     'Место происшествия': 'incedent_place',

@@ -1,15 +1,19 @@
 import uuid
 from datetime import datetime
-
 import pika
 import json
 
 from selenium.common.exceptions import TimeoutException
+from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
 from utils.custom_exceptions import ProxyError
-
 from utils.validations import validate_sts, ValidationSTSError
 from penalty_parser import BotParserPenalty
 from utils.loggers import requests_logger
+
+from api_lib.sync_api import ApiSync
+from api_lib.utils.messages import IncomingMessage
+
+
 WORKER_UUID = uuid.uuid4()
 requests_logger.info(f'[INIT] Начало инициализации кролика и парсера {WORKER_UUID=}')
 connection = pika.BlockingConnection(pika.ConnectionParameters(
@@ -20,11 +24,13 @@ channel = connection.channel()
 channel.queue_declare(queue='fines_parsed_data')
 channel.queue_declare(queue='fines_parsing')
 
+# Запускаем экземпляр селениума один раз
 parser_penalty = BotParserPenalty(WORKER_UUID)
 
 
 def parse(sts, gov_number):
-    try:        
+    # Предварительная валидация, запуск парсинга
+    try:
         validate_sts(sts)
         requests_logger.info(f"[INIT] Запрос {gov_number=} {sts=} {WORKER_UUID=}")
         # Выбираем прокси из списка и убираем его
@@ -35,49 +41,43 @@ def parse(sts, gov_number):
         # Помещаем обратно в конец
         # proxy_list.append(available_proxy)
         if not data:
-            return {'result': 'Fail', 'data': {'error': 'not found'}}
-        return {'result': 'Success', 'data': data}
+            return {'error': 'not found'}, False
+        return data
     except ProxyError:
         requests_logger.error('[ERROR] Proxy error')
         # message_text = 'Парсер ГИБДД\n Прокси не работают'
         # send_message(message_text)
-        return {'result': 'Fail', 'data': {'error': 'proxy error'}}
+        return {'error': 'proxy error'}
     except TimeoutException:
         requests_logger.error('[ERROR] timeout')
-        return {'result': 'Fail', 'data': {'error': 'timeout'}}
+        return {'error': 'timeout'}
     except ValidationSTSError as err:
-        return {'result': 'Fail', 'data': {'error': f'{err.text}'}}
+        return {'error': f'{err.text}'}
     except Exception as err:
         requests_logger.error(f'Error - {str(err)}')
-        return {'result': 'Fail', 'data': {'error': f'Parser error {str(datetime.now())}'}}
+        return {'error': f'Parser error {str(datetime.now())}'}
 
 
-def on_request(ch, method, props, body):
-    requests_logger.info(f" [OR] body(%s) {WORKER_UUID=}" % (body.decode('utf-8'),))
-    data = json.loads(body.decode('utf-8'))
+def fines_parse(message: IncomingMessage):
+    """ Обработчик запросов на парсинг """
+    requests_logger.info(f" [OR] body(%s) {WORKER_UUID=}" % message.params)
+    data = message.params
     # Из-за неправильной серилизации 1с
     # data = data['str']
+    # Получаем данные для парсинга
     gov_number = data['gov_number']
     sts = data['sts']
-    uuid = data['uuid']
 
     requests_logger.info(f" [OR] data(%s) {WORKER_UUID=}" % (data,))
 
     response = parse(gov_number=gov_number, sts=sts)
-    response['uuid'] = uuid
-    response['responded_time'] = str(datetime.now())
-    ch.basic_publish(exchange='',
-                     routing_key='fines_parsed_data',
-                     body=str(response))
-    ch.basic_ack(delivery_tag=method.delivery_tag)
 
     requests_logger.info(f" [Server] response(%s) {WORKER_UUID=}" % (response,))
     parser_penalty.clear_page()
     requests_logger.info(f" [Server] cleaned page! {WORKER_UUID=}")
 
+    return message.callback_message(response, True)
 
-# channel.basic_qos(prefetch_count=1)
-channel.basic_consume(on_message_callback=on_request, queue='fines_parsing')
 
-requests_logger.info(f"[Server] Awaiting RPC requests {WORKER_UUID=}")
-channel.start_consuming()
+api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API, service_name=SERVICE_NAME,
+              methods={'fines': fines_parse})
