@@ -4,6 +4,8 @@ import pika
 import json
 
 from selenium.common.exceptions import TimeoutException
+from typing import Tuple
+
 from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
 from utils.custom_exceptions import ProxyError
 from utils.validations import validate_sts, ValidationSTSError
@@ -12,7 +14,6 @@ from utils.loggers import requests_logger
 
 from api_lib.sync_api import ApiSync
 from api_lib.utils.messages import IncomingMessage
-
 
 WORKER_UUID = uuid.uuid4()
 requests_logger.info(f'[INIT] Начало инициализации кролика и парсера {WORKER_UUID=}')
@@ -28,7 +29,7 @@ channel.queue_declare(queue='fines_parsing')
 parser_penalty = BotParserPenalty(WORKER_UUID)
 
 
-def parse(sts, gov_number):
+def parse(sts, gov_number) -> Tuple[dict, bool]:
     # Предварительная валидация, запуск парсинга
     try:
         validate_sts(sts)
@@ -40,22 +41,23 @@ def parse(sts, gov_number):
 
         # Помещаем обратно в конец
         # proxy_list.append(available_proxy)
+        # TODO: вспомнить формат возвращаемых данных парсера
         if not data:
             return {'error': 'not found'}, False
-        return data
+        return data, True
     except ProxyError:
         requests_logger.error('[ERROR] Proxy error')
         # message_text = 'Парсер ГИБДД\n Прокси не работают'
         # send_message(message_text)
-        return {'error': 'proxy error'}
+        return {'error': 'proxy error'}, False
     except TimeoutException:
         requests_logger.error('[ERROR] timeout')
-        return {'error': 'timeout'}
+        return {'error': 'timeout'}, False
     except ValidationSTSError as err:
-        return {'error': f'{err.text}'}
+        return {'error': f'{err.text}'}, False
     except Exception as err:
         requests_logger.error(f'Error - {str(err)}')
-        return {'error': f'Parser error {str(datetime.now())}'}
+        return {'error': f'Parser error {str(datetime.now())}'}, False
 
 
 def fines_parse(message: IncomingMessage):
@@ -74,7 +76,7 @@ def fines_parse(message: IncomingMessage):
     parser_penalty.clear_page()
     requests_logger.info(f" [Server] cleaned page! {WORKER_UUID=}")
 
-    return message.callback_message(response, True)
+    return message.callback_message(response[0], response[1])
 
 
 api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API, service_name=SERVICE_NAME,
