@@ -62,8 +62,6 @@ def fines_parse(message: IncomingMessage):
     """ Обработчик запросов на парсинг """
     requests_logger.info(f" [OR] body(%s) {WORKER_UUID=}" % message.params)
     data = message.params
-    # Из-за неправильной серилизации 1с
-    # data = data['str']
     # Получаем данные для парсинга
     gov_number = data['gov_number']
     sts = data['sts']
@@ -80,4 +78,4 @@ def fines_parse(message: IncomingMessage):
 
 
 api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API, service_name=SERVICE_NAME,
-              methods={'fines': fines_parse})
+              methods={'penalty': fines_parse})

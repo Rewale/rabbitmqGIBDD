@@ -6,7 +6,7 @@ import utils.system_utils
 URL_API = ''
 PASS_API = ''
 USER_API = ''
-SERVICE_NAME = 'GIBGG'
+SERVICE_NAME = 'GIBDD'
 
 URL = 'https://гибдд.рф/check/fines#++'
 

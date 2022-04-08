@@ -1,12 +1,12 @@
 """
 
-Модуль хранит настроеные логгеры
+Модуль хранит настроенные логгеры
 
 """
 from loguru import logger
 from settings import SAVE_FILE_LOG
 
-
+# TODO: отдельный файл для каждого воркера
 # сохранение логов в файлы (не нужно при вызове супервизором)
 if SAVE_FILE_LOG:
     logger.add('/logs/parser.log',
