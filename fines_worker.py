@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+import uuid
 from datetime import datetime
 
 import pika
@@ -10,8 +10,8 @@ from utils.custom_exceptions import ProxyError
 from utils.validations import validate_sts, ValidationSTSError
 from penalty_parser import BotParserPenalty
 from utils.loggers import requests_logger
-
-requests_logger.info('[INIT] Начало инициализации кролика и парсера')
+WORKER_UUID = uuid.uuid4()
+requests_logger.info(f'[INIT] Начало инициализации кролика и парсера {WORKER_UUID=}')
 connection = pika.BlockingConnection(pika.ConnectionParameters(
     virtual_host='/',
     host='192.168.0.216'))
@@ -20,13 +20,13 @@ channel = connection.channel()
 channel.queue_declare(queue='fines_parsed_data')
 channel.queue_declare(queue='fines_parsing')
 
-parser_penalty = BotParserPenalty()
+parser_penalty = BotParserPenalty(WORKER_UUID)
 
 
 def parse(sts, gov_number):
     try:        
         validate_sts(sts)
-        requests_logger.info(f"[INIT] Запрос {gov_number=} {sts=}")
+        requests_logger.info(f"[INIT] Запрос {gov_number=} {sts=} {WORKER_UUID=}")
         # Выбираем прокси из списка и убираем его
         # available_proxy = proxy_list.pop(choice(range(len(proxy_list))))
 
@@ -53,15 +53,15 @@ def parse(sts, gov_number):
 
 
 def on_request(ch, method, props, body):
-    requests_logger.info(" [OR] body(%s)" % (body.decode('utf-8'),))
+    requests_logger.info(f" [OR] body(%s) {WORKER_UUID=}" % (body.decode('utf-8'),))
     data = json.loads(body.decode('utf-8'))
     # Из-за неправильной серилизации 1с
-    data = data['str']
+    # data = data['str']
     gov_number = data['gov_number']
     sts = data['sts']
     uuid = data['uuid']
 
-    requests_logger.info(" [OR] data(%s)" % (data,))
+    requests_logger.info(f" [OR] data(%s) {WORKER_UUID=}" % (data,))
 
     response = parse(gov_number=gov_number, sts=sts)
     response['uuid'] = uuid
@@ -71,13 +71,13 @@ def on_request(ch, method, props, body):
                      body=str(response))
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
-    requests_logger.info(" [Server] response(%s)" % (response,))
+    requests_logger.info(f" [Server] response(%s) {WORKER_UUID=}" % (response,))
     parser_penalty.clear_page()
-    requests_logger.info(" [Server] cleaned page!")
+    requests_logger.info(f" [Server] cleaned page! {WORKER_UUID=}")
 
 
 # channel.basic_qos(prefetch_count=1)
 channel.basic_consume(on_message_callback=on_request, queue='fines_parsing')
 
-requests_logger.info("[Server] Awaiting RPC requests")
+requests_logger.info(f"[Server] Awaiting RPC requests {WORKER_UUID=}")
 channel.start_consuming()

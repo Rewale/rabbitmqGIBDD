@@ -3,14 +3,13 @@ import pika
 import uuid
 import json
 import sys
-from ..utils.loggers import requests_logger
+from client_logger import client_request_logger as requests_logger
 
 
 class ParserRpcClient(object):
     def __init__(self):
         self.connection = pika.BlockingConnection(pika.ConnectionParameters(
-                virtual_host='test',
-                host='192.168.0.216'))
+            host='localhost'))
 
         self.channel = self.connection.channel()
         self.response = None

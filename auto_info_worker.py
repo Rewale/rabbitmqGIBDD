@@ -1,18 +1,12 @@
+import json
+import signal
 import sys
 import uuid
-
 from datetime import datetime
 
 import pika
-import json
-import signal
-
 from selenium.common.exceptions import TimeoutException, UnexpectedAlertPresentException
 
-from utils.system_utils import GracefulKiller
-from utils.custom_exceptions import ProxyError
-
-from utils.validations import validate_sts, ValidationSTSError
 from parsers import BotParser
 from utils.loggers import requests_logger
 
@@ -27,18 +21,8 @@ channel = connection.channel()
 channel.queue_declare(queue='auto_info_parsed_data')
 channel.queue_declare(queue='auto_info_parsing')
 
-parser = BotParser()
-k = GracefulKiller()
+parser = BotParser(WORKER_UUID)
 
-
-def on_exit():
-    requests_logger.info(f"[EXIT] Kill {WORKER_UUID=}")
-    parser.driver.quit()
-    sys.exit(0)
-
-
-# Действие при выходе
-k.exit_gracefully = on_exit
 
 
 def parse(vin_code: str, method: str = 'all'):
@@ -60,8 +44,8 @@ def parse(vin_code: str, method: str = 'all'):
     except TimeoutException:
         return {'result': 'Fail', 'data': {'error': 'timeout'}}
     except Exception as err:
-        # TODO: Добавлять в логи трейсбек необработанного исключения
-        # requests_logger.error(f'Error - {str(err)}')
+        import traceback
+        requests_logger.error(traceback.format_exc())
         # PathL('./gibdd_parser/logs/critical-errors/').mkdir(parents=True, exist_ok=True)
         # error_path = f'gibdd_parser/logs/critical-errors/parser-{str(datetime.now())}.log'
         # with open(error_path, 'w') as log:

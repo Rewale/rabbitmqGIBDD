@@ -15,12 +15,15 @@
 
 # импорты с питонячих библиотек
 import datetime
+import os
+import signal
+import sys
 import time
 import uuid
 from pathlib import Path
 from time import sleep
 from random import choice
-from settings import FILES_1C
+
 # импорты со стронних библиотек
 # from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
@@ -42,6 +45,14 @@ from fake_useragent import UserAgent
 from seleniumwire import webdriver
 
 # иморт с локальных модулей
+import utils
+from settings import URL as URL, english_names, ITERATIONS, SEARCH_LIMIT_SEC, FILES_1C
+from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
+from utils.loggers import parser_logger
+from utils.system_utils import get_script_dir
+from utils.work_with_proxy import read_proxy_json
+
+# импорт с локальных модулей
 from settings import URL_CHECK_AUTO as URL, english_names, ITERATIONS, SEARCH_LIMIT_SEC
 from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
 from utils.loggers import parser_logger
@@ -51,32 +62,31 @@ IMAGES_BASE_URL = 'http://192.168.0.200:8010/gibdd/api/v1/images/'
 BAD_VIN_LIST = ['Сначала нужно ввести идентификационный номер транспортного средства (VIN)',
                 'Введите VIN, номер кузова или номер шасси.']
 
-# Запрос     = Новый HTTPЗапрос("/files" + ?(ОбщийСерверПовтИсп.ЭтоНеРабочаяБаза(), "progr",
-# "") + "/index.php?operation=write&extension=" + Строка(РасширениеФайла + "&author=" + Строка(Автор) + "&typedoc=" +
-# Строка(ВидФайла) + "&filename=" + Строка(ИмяФайла)));
-#
-# Запрос.УстановитьТелоИзСтроки(Base64Строка(Данные));
+is_screen = False
+SAVE_PATH = get_script_dir()+'/%s'
+SCREENSHOTS_SAVE_PATH = SAVE_PATH+'/screenshots'
 
 
 class BotParser:
     """  Бот-парсер вся логика парсера лежит тут """
 
-    def __init__(self):
+    def exit_gracefully(self, *args):
+        parser_logger.info(f"[EXIT] Kill {self.WORKER_UUID=}")
+        self.driver.quit()
+        sys.exit(0)
 
-        """ Инициализация данных """
+    def __init__(self, WORKER_UUID):
+        # Очистка памяти при выходе
+        signal.signal(signal.SIGINT, self.exit_gracefully)
+        signal.signal(signal.SIGTERM, self.exit_gracefully)
 
+        self.WORKER_UUID = WORKER_UUID
         self.code = None
         self.parser_method = None
 
-        # user_agent = UserAgent().firefox
-
         # путь для расширений Firefox
-
-        # extensions_path = './firefox_addons/'
-        extensions_path = '/home/kolchanovaa/Рабочий стол/parsers/parser-gibdd-docker/rabbitMQ' + \
-                          '/firefox_addons/'  # заменить
-
-        # parser_logger.info("[Инициализация] Полученный код: %s" % self.code)
+        extensions_path = '/home/kolchanovaa/Рабочий стол/parsers/' \
+                          'parsers_gibdd_rabbitMQ/utils/firefox_addons/ublock_origin.xpi'
 
         # юзер агент и прокси
         user_agent = UserAgent().firefox
@@ -89,13 +99,13 @@ class BotParser:
         # options.add_argument("disable-infobars")
         # options.add_argument("--disable-extensions")
         options.add_argument('--no-sandbox')
-        # options.add_argument('--disable-application-cache')
+        options.add_argument('--disable-application-cache')
         options.add_argument('--disable-gpu')
         options.add_argument("--disable-dev-shm-usage")
         options.headless = True
 
         profile = webdriver.FirefoxProfile()
-        profile.add_extension(extension=extensions_path + 'ublock_origin.xpi')
+        profile.add_extension(extension=extensions_path)
         # self.driver.install_addon(f'{extensions_path}ublock_origin.xpi',)
         # настройки для seleniumwire
         sw_options = {
@@ -111,11 +121,17 @@ class BotParser:
         # self.driver = webdriver.Firefox()#seleniumwire_options=options)
         self.driver.set_page_load_timeout(40)
 
-        self.driver.install_addon(f'{extensions_path}ublock_origin.xpi', )
-        #                           temporary=True)
+        self.driver.install_addon(f'{extensions_path}', )
         self.driver.set_window_size(1200, 1200)
         self.driver.get(URL)
 
+        if is_screen:
+            path = SAVE_PATH % self.WORKER_UUID
+            os.mkdir(path)
+            self.screen_path = SCREENSHOTS_SAVE_PATH % self.WORKER_UUID
+            os.mkdir(self.screen_path)
+            self.make_screenshot('start.png')
+            parser_logger.info(f"[INIT] Screen {path=}")
     #        self.driver.get('http://2ip.ru')
 
     def _remove_interfering_windows(self, numeric=True):
@@ -133,6 +149,10 @@ class BotParser:
             except Exception:
                 pass
 
+    def make_screenshot(self, file_name):
+        if is_screen:
+            self.driver.save_screenshot(self.screen_path+f'/{file_name}.png')
+
     def _send_field_orig(self):
 
         """ Отправляет код в input_field """
@@ -142,7 +162,6 @@ class BotParser:
         try:
             input_field = self.driver.find_element_by_id("checkAutoVIN")
             input_field.send_keys(self.code)
-            # self.driver.save_screenshot('ОТПРАВКА КОДА')
             parser_logger.info("Ввод VIN кода: %s" % self.code)
             return True
         except NoSuchElementException:
@@ -164,13 +183,10 @@ class BotParser:
         """ Отправляет код в input_field """
         parser_logger.info("Отправка кода в input_field ")
         try:
-            # input_field = self.driver.find_element_by_id("checkAutoVIN")
-            # self.driver.save_screenshot(f'start_send_input_field{time.time()}.png')
             input_field = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.ID, 'checkAutoVIN'))
             )
             input_field.send_keys(self.code)
-            # self.driver.save_screenshot('ОТПРАВКА КОДА')
             parser_logger.info("Ввод VIN кода: %s" % self.code)
             return True
         except TimeoutException:
@@ -391,7 +407,7 @@ class BotParser:
                     return return_data
 
                 except NoSuchElementException:
-                    self.driver.save_screenshot('Регистрация не найден элемент')
+                    self.make_screenshot('registration_not_found.png')
                     sleep(0.5)
                     iteration += 1
                     if iteration == ITERATIONS:
@@ -458,21 +474,10 @@ class BotParser:
             button_exist = False
             return_data = self._change_data_output_format(unparsed_data)
         except TimeoutException as e:
-            self.driver.save_screenshot('timeout_history.png')
+            self.make_screenshot('timeout_history.png')
             raise e
 
         return return_data
-
-        # except (NoSuchElementException, TimeoutException):
-        #     # self.driver.save_screenshot('Регистрация не найден элемент')
-        #     # sleep(0.5)
-        #     iteration += 1
-        #     if iteration == ITERATIONS:
-        #         raise RuntimeError
-        #
-        # except ElementClickInterceptedException:
-        #     message = 'Указан некорректный идентификатор транспортного средства (VIN).'
-        #     return message
 
     def _get_road_accident_history(self):
 
@@ -518,11 +523,11 @@ class BotParser:
                         raise NoSuchElementException
 
                     return_data = self._change_dtp_output(result)
+                    self.make_screenshot(f'dtp_found_at_iter_{iteration}.png')
                     button_exist = False
                     return return_data
 
                 except NoSuchElementException:
-                    self.driver.save_screenshot('dtp_not_found.png')
                     sleep(0.5)
                     iteration += 1
                     parser_logger.info(f"[ACCIDENT-DATA] Элемент не найден, итерация: {iteration}")
@@ -704,7 +709,6 @@ class BotParser:
                 raise RuntimeError
 
         return_data = {'result': 'Success', 'data': {}}
-        # self.driver.save_screenshot('Окно')
         try:
             if 'registration_history' in self.parser_method or 'all' in self.parser_method:
                 data = self._get_registration_history_webdriver_wait()

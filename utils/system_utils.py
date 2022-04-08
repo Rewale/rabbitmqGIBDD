@@ -3,6 +3,8 @@ import os
 import signal
 import sys
 
+from utils.loggers import requests_logger
+
 
 def get_script_dir(follow_symlinks=True):
     """ Текущая директория скрипта (не зависимо откуда он вызван)"""
@@ -15,13 +17,7 @@ def get_script_dir(follow_symlinks=True):
     return os.path.dirname(path)
 
 
-class GracefulKiller:
-    """ Перехватывает сигналы завершения работы
-    и освобождает память перед выходом"""
-    def __init__(self):
-        signal.signal(signal.SIGINT, self.exit_gracefully)
-        signal.signal(signal.SIGTERM, self.exit_gracefully)
+def get_firefox_addons_dir():
+    return get_script_dir()+'/firefox_addons/'
 
 
-    def exit_gracefully(self, *args):
-        pass

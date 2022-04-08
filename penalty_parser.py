@@ -15,11 +15,15 @@
 
 # импорты с питонячих библиотек
 import datetime
+import os
+import signal
+import sys
 import time
 import uuid
 from pathlib import Path
 from time import sleep
 from random import choice
+import utils.system_utils
 
 # импорты со стронних библиотек
 # from selenium import webdriver
@@ -46,18 +50,25 @@ from seleniumwire import webdriver
 # from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
 # from utils.loggers import parser_logger
 # from utils.work_with_proxy import read_proxy_json
+import utils
 from utils.loggers import parser_logger
 
 URL = 'https://гибдд.рф/check/fines#++'
 
+SAVE_PATH = utils.system_utils.get_script_dir()+'/Screenshots/%s'
+SCREENSHOTS_SAVE_PATH = SAVE_PATH
 URL_Refresh = 'https://гибдд.рф/check/fines'
-is_screen = False
+is_screen = True
 
 
 class BotParserPenalty:
     """  Бот-парсер вся логика парсера лежит тут """
+    def exit_gracefully(self, *args):
+        parser_logger.info(f"[EXIT] Kill {self.WORKER_UUID=}")
+        self.driver.quit()
+        sys.exit(0)
 
-    def __init__(self, available_proxy=None):
+    def __init__(self, WORKER_UUID, available_proxy=None):
 
         """
         Инициализация данных, где:
@@ -65,9 +76,16 @@ class BotParserPenalty:
          * gov_number - государственный номер автомобиля.
          * sts - номер свидетельства о регистрации.
         """
+
+        # Очистка памяти при выходе
+        signal.signal(signal.SIGINT, self.exit_gracefully)
+        signal.signal(signal.SIGTERM, self.exit_gracefully)
+
+        self.WORKER_UUID = WORKER_UUID
+
         self.sts_number = None
         self.gov_number = None
-        self.parses_uuid = uuid.uuid4()
+        self.parses_uuid = WORKER_UUID
         self.busy = False
 
         # юзер агент и прокси
@@ -78,8 +96,8 @@ class BotParserPenalty:
         # else:
         #     self.proxy = available_proxy
 
-        extensions_path = str(Path().parent.absolute().parent.absolute()) + '/gibdd_parser/gibdd_parser/firefox_addons/'  # заменить
-        # extensions_path = './firefox_addons/'
+        extensions_path = utils.system_utils.get_firefox_addons_dir()
+
         options = webdriver.FirefoxOptions()
         # options.add_argument("--disable-extensions")
         options.add_argument('--no-sandbox')
@@ -107,6 +125,13 @@ class BotParserPenalty:
         self.driver.set_window_size(1200, 1200)
         self.driver.get(URL)
         parser_logger.info(f"[INIT] END {self.parses_uuid=}")
+
+        if is_screen:
+            path = SAVE_PATH % self.parses_uuid
+            os.mkdir(path)
+            self.screen_path = path
+            self.make_screenshot('start.png')
+            parser_logger.info(f"[INIT] Screen {path=}")
 
     def __parse_result(self) -> list:
 
@@ -157,6 +182,7 @@ class BotParserPenalty:
             except TimeoutException:
                 pass
         parser_logger.info('[PR] Таймаут парсинга результата')
+        self.make_screenshot(f'timeout.png')
         raise TimeoutException
         # Ждем пока появится элементы
         # ([string-length(text()) > 1] - не работает и все равно находит без текста)
@@ -181,7 +207,7 @@ class BotParserPenalty:
             parser_logger.warning('Бесконечная загрузка')
             load_message = self.driver.find_element_by_xpath('//*[contains(text(), "Идет загрузка")]')
             if is_screen:
-                self.driver.save_screenshot('find_erros.jpeg')
+                self.make_screenshot('find_errors.png')
             if load_message:
                 parser_logger.warning('Сохранен скриншот')
                 raise TimeoutException
@@ -206,13 +232,12 @@ class BotParserPenalty:
         parser_logger.info(f'[IC] Нажатие на кнопку поиска {self.parses_uuid=}')
         # search_button = self.driver. \
         #     find_element_by_xpath('//*[contains(text(), "запросить проверку")]')
-        if is_screen:
-            self.driver.save_screenshot(f'button{datetime.datetime.now()}.png')
+
+        self.make_screenshot(f'button{datetime.datetime.now()}.png')
         search_button = WebDriverWait(self.driver, 2).until(
             EC.element_to_be_clickable((By.XPATH, '//*[contains(text(), "запросить проверку")]')))
 
         parser_logger.info(f'[IC] Найдена кнопка поиска {str(search_button)}')
-        # self.driver.save_screenshot('button.png')
         ActionChains(self.driver).move_to_element(search_button).click().perform()
         # ActionChains(self.driver).click(search_button).perform()
 
@@ -248,20 +273,8 @@ class BotParserPenalty:
 
     def make_screenshot(self, file_name):
         if is_screen:
-            self.driver.save_screenshot(f'{file_name}.png')
+            self.driver.save_screenshot(self.screen_path+f'/{file_name}.png')
 
     def clear_page(self):
         """Обновляем страницу и очищаем поля (~0.5 секунды)"""
-
         self.driver.get(URL_Refresh)
-
-        # self.driver.refresh()
-        #
-        # sts_field = WebDriverWait(self.driver, 2).until(
-        #     EC.presence_of_element_located((By.ID, "checkFinesStsnum")))
-        # sts_field.clear()
-        #
-        # number_field = WebDriverWait(self.driver, 2).until(
-        #     EC.presence_of_element_located((By.ID, "checkFinesRegnum"))
-        # )
-        # number_field.clear()

@@ -1,6 +1,8 @@
 from pathlib import Path
 import socket
 
+import utils.system_utils
+
 URL = 'https://гибдд.рф/check/fines#++'
 
 URL_Refresh = 'https://гибдд.рф/check/fines'
@@ -8,14 +10,16 @@ is_screen = False
 
 DOCKER = False
 
-URL_CHECK_AUTO = "https://xn--90adear.xn--p1ai/check/auto"
+URL_CHECK_AUTO = 'https://xn--90adear.xn--p1ai/check/auto'
+# URL_CHECK_AUTO = "https://google.com/"
+
 URL_FINES = 'https://гибдд.рф/check/fines#++'
 HOST = '127.0.0.1'
 PROXY_API = False
 PROXY_PATH = 'proxy_list.json'
 PROXY_TYPE = 'all-parsers'
 
-extensions_path = str(Path().parent.absolute()) + '/firefox_addons/'
+SAVE_FILE_LOG = False
 
 PORT = 8011
 DEBUG = True
@@ -28,7 +32,7 @@ if DEBUG:
 else:
     FILES_1C = 'http://192.168.0.7/files/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
-ITERATIONS = 120
+ITERATIONS = 15
 
 # лимит поиска результата
 SEARCH_LIMIT_SEC = 20
