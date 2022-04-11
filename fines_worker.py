@@ -8,7 +8,7 @@ from typing import Tuple, Union
 
 from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
 from utils.custom_exceptions import ProxyError
-from utils.validations import validate_sts, ValidationSTSError
+from utils.validations import validate_sts, ValidationGosNumError, validate_gos_num, ValidationSTSError
 from penalty_parser import BotParserPenalty
 from utils.loggers import requests_logger
 
@@ -29,19 +29,13 @@ channel.queue_declare(queue='fines_parsing')
 parser_penalty = BotParserPenalty(WORKER_UUID)
 
 
-def parse(sts, gov_number) -> Tuple[Union[dict, list], bool]:
+def parse(sts, gov_number) -> Tuple[Union[dict, list, str], bool]:
     # Предварительная валидация, запуск парсинга
     try:
         validate_sts(sts)
+        validate_gos_num(gov_number)
         requests_logger.info(f"[INIT] Запрос {gov_number=} {sts=} {WORKER_UUID=}")
-        # Выбираем прокси из списка и убираем его
-        # available_proxy = proxy_list.pop(choice(range(len(proxy_list))))
-
         data = parser_penalty.parse_data(sts=sts, gov_number=gov_number)
-
-        # Помещаем обратно в конец
-        # proxy_list.append(available_proxy)
-        # TODO: вспомнить формат возвращаемых данных парсера
         if not data:
             return {'error': 'not found'}, False
         return data, True
@@ -53,7 +47,7 @@ def parse(sts, gov_number) -> Tuple[Union[dict, list], bool]:
     except TimeoutException:
         requests_logger.error('[ERROR] timeout')
         return {'error': 'timeout'}, False
-    except ValidationSTSError as err:
+    except (ValidationGosNumError, ValidationSTSError) as err:
         return {'error': f'{err.text}'}, False
     except Exception as err:
         requests_logger.error(f'Error - {str(err)}')
@@ -64,7 +58,7 @@ def fines_parse(message: IncomingMessage):
     """ Обработчик запросов на парсинг """
     requests_logger.info(f" [OR] body(%s) {WORKER_UUID=}" % message.params)
     data = message.params
-    # Получаем данные для парсинга
+
     gov_number = data['gov_number']
     sts = data['sts']
 
@@ -80,4 +74,4 @@ def fines_parse(message: IncomingMessage):
 
 
 api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API, service_name=SERVICE_NAME,
-              methods={'penalty': fines_parse})
+              methods={'fines': fines_parse})
