@@ -4,7 +4,7 @@ import pika
 import json
 
 from selenium.common.exceptions import TimeoutException
-from typing import Tuple
+from typing import Tuple, Union
 
 from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
 from utils.custom_exceptions import ProxyError
@@ -29,7 +29,7 @@ channel.queue_declare(queue='fines_parsing')
 parser_penalty = BotParserPenalty(WORKER_UUID)
 
 
-def parse(sts, gov_number) -> Tuple[dict, bool]:
+def parse(sts, gov_number) -> Tuple[Union[dict, list], bool]:
     # Предварительная валидация, запуск парсинга
     try:
         validate_sts(sts)

@@ -53,7 +53,7 @@ from seleniumwire import webdriver
 import utils
 from utils.loggers import parser_logger
 
-URL = 'https://гибдд.рф/check/fines#++'
+URL = 'https://гибдд.рф/check/fines'
 
 SAVE_PATH = utils.system_utils.get_script_dir()+'/Screenshots/%s'
 SCREENSHOTS_SAVE_PATH = SAVE_PATH
@@ -99,9 +99,9 @@ class BotParserPenalty:
         extensions_path = utils.system_utils.get_firefox_addons_dir()
 
         options = webdriver.FirefoxOptions()
-        # options.add_argument("--disable-extensions")
+        options.add_argument("--disable-extensions")
         options.add_argument('--no-sandbox')
-        # options.add_argument('--disable-application-cache')
+        options.add_argument('--disable-application-cache')
         options.add_argument('--disable-gpu')
         options.add_argument("--disable-dev-shm-usage")
         options.headless = True
@@ -117,9 +117,10 @@ class BotParserPenalty:
             },
         }
 
-        self.driver = webdriver.Firefox(options=options, seleniumwire_options=sw_options)
+        # self.driver = webdriver.Firefox(options=options, seleniumwire_options=sw_options)
+        self.driver = webdriver.Firefox()
         self.driver.install_addon(f'{extensions_path}ublock_origin.xpi', )
-        self.driver.set_page_load_timeout(40)
+        # self.driver.set_page_load_timeout(40)
         # self.driver.implicitly_wait(5)
 
         self.driver.set_window_size(1200, 1200)
@@ -128,7 +129,8 @@ class BotParserPenalty:
 
         if is_screen:
             path = SAVE_PATH % self.parses_uuid
-            os.mkdir(path)
+            if not os.path.exists(path):
+                os.mkdir(path)
             self.screen_path = path
             self.make_screenshot('start.png')
             parser_logger.info(f"[INIT] Screen {path=}")
@@ -142,7 +144,7 @@ class BotParserPenalty:
         start = time.time()
 
         # Пытаемся как можно быстрее узнать результат
-        while (time.time() - start) < 4:
+        while (time.time() - start) < 10:
             try:
                 WebDriverWait(self.driver, 0.2).until(
                     EC.presence_of_all_elements_located(
@@ -182,7 +184,7 @@ class BotParserPenalty:
             except TimeoutException:
                 pass
         parser_logger.info('[PR] Таймаут парсинга результата')
-        self.make_screenshot(f'timeout.png')
+        self.make_screenshot(f'timeout')
         raise TimeoutException
         # Ждем пока появится элементы
         # ([string-length(text()) > 1] - не работает и все равно находит без текста)
@@ -197,22 +199,19 @@ class BotParserPenalty:
 
         try:
             parser_logger.info(f'[IC] Поле гос. номера {self.parses_uuid=}')
-            # sleep(5)
-            number_field = WebDriverWait(self.driver, 5).until(
+            number_field = WebDriverWait(self.driver, 25).until(
                 EC.presence_of_element_located((By.ID, "checkFinesRegnum"))
             )
-            # number_field = self.driver.find_element_by_id('checkFinesRegnum')
             number_field.send_keys(number)
         except TimeoutException:
             parser_logger.warning('Бесконечная загрузка')
             load_message = self.driver.find_element_by_xpath('//*[contains(text(), "Идет загрузка")]')
             if is_screen:
-                self.make_screenshot('find_errors.png')
-            if load_message:
+                self.make_screenshot('find_errors')
                 parser_logger.warning('Сохранен скриншот')
+            if load_message:
                 raise TimeoutException
 
-        # sleep(2)
         parser_logger.info(f'[IC] Поле региона {self.parses_uuid=}')
         # region_field = self.driver.find_element_by_id('checkFinesRegreg')
         region_field = WebDriverWait(self.driver, 2).until(
@@ -220,8 +219,6 @@ class BotParserPenalty:
         )
         region_field.send_keys(region)
 
-
-        # sleep(2)
         parser_logger.info(f'[IC] Поле свидетельства о регистрации {self.parses_uuid=}')
         # sts_field = self.driver.find_element_by_id('checkFinesStsnum')
         sts_field = WebDriverWait(self.driver, 2).until(
