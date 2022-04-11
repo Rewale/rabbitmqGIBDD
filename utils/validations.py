@@ -1,8 +1,14 @@
-# from custom_exceptions import ValidationError
+import re
+
 
 class ValidationSTSError(Exception):
     def __init__(self, text):
         self.text = text
+
+
+class ValidationGosNumError(Exception):
+    def __init__(self):
+        self.text = 'Некорректный гос. номер'
 
 
 def get_russian_abc():
@@ -24,7 +30,7 @@ def validate_sts(sts: str) -> bool:
     if not sts[2].isnumeric() and sts[2].lower() not in get_russian_abc() \
             or not sts[3].isnumeric() and sts[3].lower() not in get_russian_abc():
         raise ValidationSTSError('3 и 4 символ СТС должны быть'
-                              ' числами либо буквами русского алфавита')
+                                 ' числами либо буквами русского алфавита')
 
     # остальные символы должны быть числами
     part1 = sts[0:2]
@@ -36,3 +42,12 @@ def validate_sts(sts: str) -> bool:
         raise ValidationSTSError('Символы с 6 по 10 должны быть числами')
 
     return True
+
+
+def validate_gos_num(gos_num: str):
+    if len(gos_num) != 9:
+        raise ValidationGosNumError()
+
+    pattern = r'^[АВЕКМНОРСТУХ]\d{3}(?<!000)[АВЕКМНОРСТУХ]{2}\d{2,3}$'
+    if not re.match(pattern, gos_num):
+        raise ValidationGosNumError()

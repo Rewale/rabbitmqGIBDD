@@ -14,7 +14,7 @@ def test_run_parser():
     gov_number = 'Е081СУ159'
     parser_penalty = BotParserPenalty('test_guid')
     data = parser_penalty.parse_data(sts=sts, gov_number=gov_number)
-    assert data
+    assert data == "В результате проверки не были найдены сведения о неуплаченных штрафах"
 
 
 def test_run_parser_fines():

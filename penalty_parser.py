@@ -68,7 +68,7 @@ class BotParserPenalty:
         self.driver.quit()
         sys.exit(0)
 
-    def __init__(self, WORKER_UUID, available_proxy=None):
+    def __init__(self, WORKER_UUID, option: bool = True, available_proxy=None):
 
         """
         Инициализация данных, где:
@@ -117,8 +117,11 @@ class BotParserPenalty:
             },
         }
 
-        # self.driver = webdriver.Firefox(options=options, seleniumwire_options=sw_options)
-        self.driver = webdriver.Firefox()
+        if option:
+            self.driver = webdriver.Firefox(options=options, seleniumwire_options=sw_options)
+        else:
+            self.driver = webdriver.Firefox()
+
         self.driver.install_addon(f'{extensions_path}ublock_origin.xpi', )
         # self.driver.set_page_load_timeout(40)
         # self.driver.implicitly_wait(5)
