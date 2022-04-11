@@ -4,9 +4,9 @@ import utils.system_utils
 
 # API rabbit
 URL_API = ''
-PASS_API = ''
-USER_API = ''
-SERVICE_NAME = 'GIBDD'
+PASS_API = 'guest'
+USER_API = 'guest'
+SERVICE_NAME = 'GIBDDFINESPROGR'
 
 URL = 'https://гибдд.рф/check/fines#++'
 

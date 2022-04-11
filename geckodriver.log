@@ -470,3 +470,32 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1649672308065	geckodriver	INFO	Listening on 127.0.0.1:33375
+1649672309071	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilePEo1VN"
+*** You are running in headless mode.
+1649672309561	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePEo1VN/search.json.mozlz4", (void 0)))
+1649672310460	Marionette	INFO	Listening on port 45507
+1649672310498	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649672310501	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:44249","noProxy":[],"sslProxy":"127.0.0.1:44249"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649672358168	geckodriver	INFO	Listening on 127.0.0.1:53969
+1649672358170	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileSGodVd"
+*** You are running in headless mode.
+1649672358535	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSGodVd/search.json.mozlz4", (void 0)))
+1649672359455	Marionette	INFO	Listening on port 45727
+1649672359487	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649672359489	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:41395","noProxy":[],"sslProxy":"127.0.0.1:41395"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

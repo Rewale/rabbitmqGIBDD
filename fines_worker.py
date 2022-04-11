@@ -6,6 +6,7 @@ import json
 from selenium.common.exceptions import TimeoutException
 from typing import Tuple, Union
 
+import test_data
 from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
 from utils.custom_exceptions import ProxyError
 from utils.validations import validate_sts, ValidationGosNumError, validate_gos_num, ValidationSTSError
@@ -14,19 +15,6 @@ from utils.loggers import requests_logger
 
 from api_lib.sync_api import ApiSync
 from api_lib.utils.messages import IncomingMessage
-
-WORKER_UUID = uuid.uuid4()
-requests_logger.info(f'[INIT] Начало инициализации кролика и парсера {WORKER_UUID=}')
-connection = pika.BlockingConnection(pika.ConnectionParameters(
-    virtual_host='/',
-    host='192.168.0.216'))
-
-channel = connection.channel()
-channel.queue_declare(queue='fines_parsed_data')
-channel.queue_declare(queue='fines_parsing')
-
-# Запускаем экземпляр селениума один раз
-parser_penalty = BotParserPenalty(WORKER_UUID)
 
 
 def parse(sts, gov_number) -> Tuple[Union[dict, list, str], bool]:
@@ -73,5 +61,13 @@ def fines_parse(message: IncomingMessage):
     return message.callback_message(response[0], response[1])
 
 
-api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API, service_name=SERVICE_NAME,
-              methods={'fines': fines_parse})
+if __name__ == '__main__':
+    WORKER_UUID = uuid.uuid4()
+    requests_logger.info(f'[INIT] Начало инициализации парсера {WORKER_UUID=}')
+    # Запускаем экземпляр селениума один раз
+    parser_penalty = BotParserPenalty(WORKER_UUID)
+    api = ApiSync(url=URL_API, schema=test_data.test_schema_rpc, pass_api=PASS_API, user_api=USER_API,
+                  service_name=SERVICE_NAME,
+                  methods={'fines': fines_parse})
+
+    api.listen_queue()
