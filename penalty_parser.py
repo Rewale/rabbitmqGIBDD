@@ -202,7 +202,7 @@ class BotParserPenalty:
 
         try:
             parser_logger.info(f'[IC] Поле гос. номера {self.parses_uuid=}')
-            number_field = WebDriverWait(self.driver, 25).until(
+            number_field = WebDriverWait(self.driver, 60).until(
                 EC.presence_of_element_located((By.ID, "checkFinesRegnum"))
             )
             number_field.send_keys(number)
