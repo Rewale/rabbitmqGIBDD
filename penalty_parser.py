@@ -51,7 +51,9 @@ from seleniumwire import webdriver
 # from utils.loggers import parser_logger
 # from utils.work_with_proxy import read_proxy_json
 import utils
+from utils.custom_exceptions import ServerError
 from utils.loggers import parser_logger
+from utils.parser_fabric import create_driver
 
 URL = 'https://гибдд.рф/check/fines'
 
@@ -88,45 +90,7 @@ class BotParserPenalty:
         self.parses_uuid = WORKER_UUID
         self.busy = False
 
-        # юзер агент и прокси
-        user_agent = UserAgent().firefox
-        # if available_proxy is None:
-        #     self.proxy_list = read_proxy_json(PROXY_PATH, PROXY_TYPE, PROXY_API)
-        #     self.proxy = choice(self.proxy_list)
-        # else:
-        #     self.proxy = available_proxy
-
-        extensions_path = utils.system_utils.get_firefox_addons_dir()
-
-        options = webdriver.FirefoxOptions()
-        options.add_argument("--disable-extensions")
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-application-cache')
-        options.add_argument('--disable-gpu')
-        options.add_argument("--disable-dev-shm-usage")
-        options.headless = True
-
-        # настройки для seleniumwire
-        sw_options = {
-            # 'proxy': {
-            #     'http': self.proxy,
-            #     'https': self.proxy.replace('http', 'https')
-            # },
-            'user-agent': {
-                user_agent,
-            },
-        }
-
-        if option:
-            self.driver = webdriver.Firefox(options=options, seleniumwire_options=sw_options)
-        else:
-            self.driver = webdriver.Firefox()
-
-        self.driver.install_addon(f'{extensions_path}ublock_origin.xpi', )
-        # self.driver.set_page_load_timeout(40)
-        # self.driver.implicitly_wait(5)
-
-        self.driver.set_window_size(1200, 1200)
+        self.driver = create_driver()
         self.driver.get(URL)
         parser_logger.info(f"[INIT] END {self.parses_uuid=}")
 
@@ -187,10 +151,14 @@ class BotParserPenalty:
             except TimeoutException:
                 pass
         parser_logger.info('[PR] Таймаут парсинга результата')
-        self.make_screenshot(f'timeout')
-        raise TimeoutException
-        # Ждем пока появится элементы
-        # ([string-length(text()) > 1] - не работает и все равно находит без текста)
+        # TODO: Если ошибка сервера - попробовать еще раз
+        xpath_server_error = '//*[contains(text(), "ошибка сервера")]'
+        try:
+            self.driver.find_element_by_xpath(xpath_server_error)
+            raise ServerError
+        except:
+            self.make_screenshot(f'timeout')
+            raise TimeoutException
 
     def __input_values_and_click_button(self) -> None:
 
@@ -202,7 +170,7 @@ class BotParserPenalty:
 
         try:
             parser_logger.info(f'[IC] Поле гос. номера {self.parses_uuid=}')
-            number_field = WebDriverWait(self.driver, 60).until(
+            number_field = WebDriverWait(self.driver, 6).until(
                 EC.presence_of_element_located((By.ID, "checkFinesRegnum"))
             )
             number_field.send_keys(number)
@@ -213,7 +181,13 @@ class BotParserPenalty:
                 self.make_screenshot('find_errors')
                 parser_logger.warning('Сохранен скриншот')
             if load_message:
-                raise TimeoutException
+                # Перезагружаем страницу и пробуем еще раз
+                self.clear_page()
+                parser_logger.info(f'[IC] Повторный ввод поля гос. номера {self.parses_uuid=}')
+                number_field = WebDriverWait(self.driver, 6).until(
+                    EC.presence_of_element_located((By.ID, "checkFinesRegnum"))
+                )
+                number_field.send_keys(number)
 
         parser_logger.info(f'[IC] Поле региона {self.parses_uuid=}')
         # region_field = self.driver.find_element_by_id('checkFinesRegreg')
@@ -276,5 +250,14 @@ class BotParserPenalty:
             self.driver.save_screenshot(self.screen_path+f'/{file_name}.png')
 
     def clear_page(self):
-        """Обновляем страницу и очищаем поля (~0.5 секунды)"""
+        # """ Очищаем форму с помощью кнопки, если ее нет перезагружаем страницу"""
+        # try:
+        #     clear_form = WebDriverWait(self.driver, 0.2).until(
+        #         EC.element_to_be_clickable((By.XPATH, '//*[contains(text(), "очистить форму")]')))
+        #     clear_form.click()
+        #     parser_logger.info("[CP] Очистка формы")
+        # except TimeoutException:
+        #     self.driver.get(URL_Refresh)
+        #     parser_logger.warning("[CP] Обновление формы. Кнопка очистки не найдена!")
         self.driver.get(URL_Refresh)
+

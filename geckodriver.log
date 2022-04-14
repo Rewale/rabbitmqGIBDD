@@ -499,3 +499,1462 @@ Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
 Exiting due to channel error.
+1649673953139	geckodriver	INFO	Listening on 127.0.0.1:45811
+1649673954154	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilezRp77c"
+*** You are running in headless mode.
+1649673954638	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezRp77c/search.json.mozlz4", (void 0)))
+1649673955569	Marionette	INFO	Listening on port 37773
+1649673955672	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649673955675	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:38553","noProxy":[],"sslProxy":"127.0.0.1:38553"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649674240745	geckodriver	INFO	Listening on 127.0.0.1:33313
+1649674240747	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileNZBCz4"
+*** You are running in headless mode.
+1649674241145	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileNZBCz4/search.json.mozlz4", (void 0)))
+1649674242037	Marionette	INFO	Listening on port 37589
+1649674242062	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649674242065	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33507","noProxy":[],"sslProxy":"127.0.0.1:33507"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649676150983	geckodriver	INFO	Listening on 127.0.0.1:35019
+1649676151995	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilev6GpGa"
+*** You are running in headless mode.
+1649676152442	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilev6GpGa/search.json.mozlz4", (void 0)))
+1649676153291	Marionette	INFO	Listening on port 40169
+1649676153311	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649676153313	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:43099","noProxy":[],"sslProxy":"127.0.0.1:43099"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649677251622	geckodriver	INFO	Listening on 127.0.0.1:39009
+1649677251625	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileyxp3hb"
+*** You are running in headless mode.
+1649677251996	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileyxp3hb/search.json.mozlz4", (void 0)))
+1649677252911	Marionette	INFO	Listening on port 37223
+1649677252940	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649677252942	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:41547","noProxy":[],"sslProxy":"127.0.0.1:41547"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649757403289	geckodriver	INFO	Listening on 127.0.0.1:44427
+1649757404296	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile9Hi1wb"
+*** You are running in headless mode.
+1649757404944	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile9Hi1wb/search.json.mozlz4", (void 0)))
+1649757405885	Marionette	INFO	Listening on port 42765
+1649757405914	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649757405916	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:34869","noProxy":[],"sslProxy":"127.0.0.1:34869"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649827392793	geckodriver	INFO	Listening on 127.0.0.1:49709
+1649827393800	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileI9XVjw"
+*** You are running in headless mode.
+1649827394448	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileI9XVjw/search.json.mozlz4", (void 0)))
+1649827395474	Marionette	INFO	Listening on port 43875
+1649827395519	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649827395521	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:39853","noProxy":[],"sslProxy":"127.0.0.1:39853"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649827470619	geckodriver	INFO	Listening on 127.0.0.1:47895
+1649827471630	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileshECRR"
+*** You are running in headless mode.
+1649827471994	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileshECRR/search.json.mozlz4", (void 0)))
+1649827472830	Marionette	INFO	Listening on port 37775
+1649827472846	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649827472848	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:37345","noProxy":[],"sslProxy":"127.0.0.1:37345"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649827919119	geckodriver	INFO	Listening on 127.0.0.1:35621
+1649827920134	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileCk0qWT"
+*** You are running in headless mode.
+1649827920545	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCk0qWT/search.json.mozlz4", (void 0)))
+1649827921372	Marionette	INFO	Listening on port 32995
+1649827921477	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649827921480	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33891","noProxy":[],"sslProxy":"127.0.0.1:33891"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649828192508	geckodriver	INFO	Listening on 127.0.0.1:58793
+1649828193514	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileM3SniG"
+*** You are running in headless mode.
+1649828193913	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileM3SniG/search.json.mozlz4", (void 0)))
+1649828194834	Marionette	INFO	Listening on port 45151
+1649828194928	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649828194930	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:34113","noProxy":[],"sslProxy":"127.0.0.1:34113"}
+1649830135268	geckodriver	INFO	Listening on 127.0.0.1:33281
+1649830135657	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "start-maximized" "disable-infobars" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileIU17Pl"
+*** You are running in headless mode.
+1649830136007	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileIU17Pl/search.json.mozlz4", (void 0)))
+1649830136978	Marionette	INFO	Listening on port 44749
+1649830137086	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649830137091	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:40303","noProxy":[],"sslProxy":"127.0.0.1:40303"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649830293613	geckodriver	INFO	Listening on 127.0.0.1:59453
+1649830294013	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "start-maximized" "disable-infobars" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilee2MkPs"
+*** You are running in headless mode.
+1649830294331	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilee2MkPs/search.json.mozlz4", (void 0)))
+1649830295329	Marionette	INFO	Listening on port 35873
+1649830295453	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649830295457	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33801","noProxy":[],"sslProxy":"127.0.0.1:33801"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649830373642	geckodriver	INFO	Listening on 127.0.0.1:39337
+1649830374045	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile2cuNDn"
+*** You are running in headless mode.
+1649830374381	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile2cuNDn/search.json.mozlz4", (void 0)))
+1649830375306	Marionette	INFO	Listening on port 38273
+1649830375358	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649830375360	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:39235","noProxy":[],"sslProxy":"127.0.0.1:39235"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649830533586	geckodriver	INFO	Listening on 127.0.0.1:39963
+1649830533985	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile4Jcyaz"
+*** You are running in headless mode.
+1649830534333	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4Jcyaz/search.json.mozlz4", (void 0)))
+1649830535255	Marionette	INFO	Listening on port 37175
+1649830535318	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649830535321	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:35129","noProxy":[],"sslProxy":"127.0.0.1:35129"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649830749892	geckodriver	INFO	Listening on 127.0.0.1:54699
+1649830750305	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileYv5sOv"
+*** You are running in headless mode.
+1649830750627	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYv5sOv/search.json.mozlz4", (void 0)))
+1649830751476	Marionette	INFO	Listening on port 36277
+1649830751517	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649830751519	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:46311","noProxy":[],"sslProxy":"127.0.0.1:46311"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649830832212	geckodriver	INFO	Listening on 127.0.0.1:33951
+1649830832611	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileSEogmt"
+*** You are running in headless mode.
+1649830832937	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileSEogmt/search.json.mozlz4", (void 0)))
+1649830833871	Marionette	INFO	Listening on port 39309
+1649830833929	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649830833932	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:35399","noProxy":[],"sslProxy":"127.0.0.1:35399"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649831168800	geckodriver	INFO	Listening on 127.0.0.1:55549
+1649831169198	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilepGwyOq"
+*** You are running in headless mode.
+1649831169521	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepGwyOq/search.json.mozlz4", (void 0)))
+1649831170424	Marionette	INFO	Listening on port 33123
+1649831170541	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649831170544	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:44877","noProxy":[],"sslProxy":"127.0.0.1:44877"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649831335242	geckodriver	INFO	Listening on 127.0.0.1:37857
+1649831335244	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilepLAZWH"
+*** You are running in headless mode.
+1649831335647	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepLAZWH/search.json.mozlz4", (void 0)))
+1649831336463	Marionette	INFO	Listening on port 41669
+1649831336591	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649831336594	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33443","noProxy":[],"sslProxy":"127.0.0.1:33443"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649831426908	geckodriver	INFO	Listening on 127.0.0.1:54057
+1649831427305	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilePNy9Ok"
+*** You are running in headless mode.
+1649831427637	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePNy9Ok/search.json.mozlz4", (void 0)))
+1649831428680	Marionette	INFO	Listening on port 43367
+1649831428718	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649831428719	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33679","noProxy":[],"sslProxy":"127.0.0.1:33679"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649831456473	geckodriver	INFO	Listening on 127.0.0.1:51179
+1649831456866	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileORG3qk"
+*** You are running in headless mode.
+1649831457191	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileORG3qk/search.json.mozlz4", (void 0)))
+1649831458032	Marionette	INFO	Listening on port 39679
+1649831458079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649831458081	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:41043","noProxy":[],"sslProxy":"127.0.0.1:41043"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649831772613	geckodriver	INFO	Listening on 127.0.0.1:46895
+1649831773007	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile0pH8JB"
+*** You are running in headless mode.
+1649831773325	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile0pH8JB/search.json.mozlz4", (void 0)))
+1649831774102	Marionette	INFO	Listening on port 42197
+1649831774120	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649831774122	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:36073","noProxy":[],"sslProxy":"127.0.0.1:36073"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649831812336	geckodriver	INFO	Listening on 127.0.0.1:56223
+1649831813761	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileiq1nSe"
+*** You are running in headless mode.
+1649831814079	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileiq1nSe/search.json.mozlz4", (void 0)))
+1649831814984	Marionette	INFO	Listening on port 39239
+1649831815097	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649831815100	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:34511","noProxy":[],"sslProxy":"127.0.0.1:34511"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1649831999330	geckodriver	INFO	Listening on 127.0.0.1:33461
+1649831999722	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilefk3b0d"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649832000365	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilefk3b0d/search.json.mozlz4", (void 0)))
+1649832001423	Marionette	INFO	Listening on port 36493
+1649832001441	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649832001443	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:35945","noProxy":[],"sslProxy":"127.0.0.1:35945"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649832716036	geckodriver	INFO	Listening on 127.0.0.1:59043
+1649832716426	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilekU9Lba"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649832717068	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilekU9Lba/search.json.mozlz4", (void 0)))
+1649832718065	Marionette	INFO	Listening on port 42613
+1649832718150	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649832718153	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33951","noProxy":[],"sslProxy":"127.0.0.1:33951"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649835272185	geckodriver	INFO	Listening on 127.0.0.1:39003
+1649835273580	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileYIsDeK"
+*** You are running in headless mode.
+1649835273907	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYIsDeK/search.json.mozlz4", (void 0)))
+1649835274792	Marionette	INFO	Listening on port 33717
+1649835274894	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649835274896	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:41695","noProxy":[],"sslProxy":"127.0.0.1:41695"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649835316089	geckodriver	INFO	Listening on 127.0.0.1:33779
+1649835316485	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile8zx7ym"
+*** You are running in headless mode.
+1649835316807	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8zx7ym/search.json.mozlz4", (void 0)))
+1649835317629	Marionette	INFO	Listening on port 39085
+1649835317697	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649835317699	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:35811","noProxy":[],"sslProxy":"127.0.0.1:35811"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649836092807	geckodriver	INFO	Listening on 127.0.0.1:44785
+1649836094198	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilezx6ZOb"
+*** You are running in headless mode.
+1649836094518	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilezx6ZOb/search.json.mozlz4", (void 0)))
+1649836095341	Marionette	INFO	Listening on port 33357
+1649836095419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649836095422	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:36439","noProxy":[],"sslProxy":"127.0.0.1:36439"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649836110652	geckodriver	INFO	Listening on 127.0.0.1:60083
+1649836112040	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileVBA1Ps"
+*** You are running in headless mode.
+1649836112356	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVBA1Ps/search.json.mozlz4", (void 0)))
+1649836113311	Marionette	INFO	Listening on port 33679
+1649836113373	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649836113376	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:34643","noProxy":[],"sslProxy":"127.0.0.1:34643"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649836758304	geckodriver	INFO	Listening on 127.0.0.1:50629
+1649836758736	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileLgsLbE"
+*** You are running in headless mode.
+1649836759086	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileLgsLbE/search.json.mozlz4", (void 0)))
+1649836759960	Marionette	INFO	Listening on port 42057
+1649836760049	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649836760051	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:37869","noProxy":[],"sslProxy":"127.0.0.1:37869"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649837139974	geckodriver	INFO	Listening on 127.0.0.1:35289
+1649837140364	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileYao0ys"
+*** You are running in headless mode.
+1649837140690	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYao0ys/search.json.mozlz4", (void 0)))
+1649837141616	Marionette	INFO	Listening on port 32987
+1649837141678	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649837141680	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:43285","noProxy":[],"sslProxy":"127.0.0.1:43285"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1649837374400	geckodriver	INFO	Listening on 127.0.0.1:36505
+1649837374795	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile8PcnYl"
+*** You are running in headless mode.
+1649837375119	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8PcnYl/search.json.mozlz4", (void 0)))
+1649837375975	Marionette	INFO	Listening on port 45441
+1649837376019	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649837376021	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33087","noProxy":[],"sslProxy":"127.0.0.1:33087"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649842218904	geckodriver	INFO	Listening on 127.0.0.1:35881
+1649842219307	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilev0m7MN"
+*** You are running in headless mode.
+1649842219633	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilev0m7MN/search.json.mozlz4", (void 0)))
+1649842220532	Marionette	INFO	Listening on port 36239
+1649842220626	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649842220628	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:37357","noProxy":[],"sslProxy":"127.0.0.1:37357"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649842563520	geckodriver	INFO	Listening on 127.0.0.1:60969
+1649842563917	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileRT6afR"
+*** You are running in headless mode.
+1649842564251	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileRT6afR/search.json.mozlz4", (void 0)))
+1649842565176	Marionette	INFO	Listening on port 37249
+1649842565254	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649842565257	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:46147","noProxy":[],"sslProxy":"127.0.0.1:46147"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649843073634	geckodriver	INFO	Listening on 127.0.0.1:41681
+1649843074034	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileoU4mKB"
+*** You are running in headless mode.
+1649843074360	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileoU4mKB/search.json.mozlz4", (void 0)))
+1649843075222	Marionette	INFO	Listening on port 43573
+1649843075250	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649843075252	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:46641","noProxy":[],"sslProxy":"127.0.0.1:46641"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649843253732	geckodriver	INFO	Listening on 127.0.0.1:60235
+1649843255197	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile88eZqf"
+*** You are running in headless mode.
+1649843255582	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile88eZqf/search.json.mozlz4", (void 0)))
+1649843256535	Marionette	INFO	Listening on port 38591
+1649843256638	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649843256642	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:35695","noProxy":[],"sslProxy":"127.0.0.1:35695"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649843265302	geckodriver	INFO	Listening on 127.0.0.1:38337
+1649843265732	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile4VEg39"
+*** You are running in headless mode.
+1649843266099	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4VEg39/search.json.mozlz4", (void 0)))
+1649843267061	Marionette	INFO	Listening on port 45331
+1649843267169	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649843267173	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:42641","noProxy":[],"sslProxy":"127.0.0.1:42641"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649843379278	geckodriver	INFO	Listening on 127.0.0.1:36919
+1649843379281	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilea1CMUa"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649843380035	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilea1CMUa/search.json.mozlz4", (void 0)))
+1649843381237	Marionette	INFO	Listening on port 44241
+1649843381298	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649843381301	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:46029","noProxy":[],"sslProxy":"127.0.0.1:46029"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649843431627	geckodriver	INFO	Listening on 127.0.0.1:38143
+1649843432637	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileCigQMv"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649843433464	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileCigQMv/search.json.mozlz4", (void 0)))
+1649843434592	Marionette	INFO	Listening on port 37759
+1649843434666	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649843434669	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:38135","noProxy":[],"sslProxy":"127.0.0.1:38135"}
+1649843499491	Marionette	INFO	Stopped listening on port 37759
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1649843548494	geckodriver	INFO	Listening on 127.0.0.1:44219
+1649843549507	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileR2iN7E"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649843550381	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileR2iN7E/search.json.mozlz4", (void 0)))
+1649843551595	Marionette	INFO	Listening on port 34199
+1649843551627	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649843551630	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:43473","noProxy":[],"sslProxy":"127.0.0.1:43473"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649854142529	geckodriver	INFO	Listening on 127.0.0.1:60611
+1649854142922	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileTV2oXn"
+*** You are running in headless mode.
+1649854143246	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileTV2oXn/search.json.mozlz4", (void 0)))
+1649854144133	Marionette	INFO	Listening on port 43591
+1649854144235	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649854144237	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:39347","noProxy":[],"sslProxy":"127.0.0.1:39347"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649854162744	geckodriver	INFO	Listening on 127.0.0.1:41715
+1649854163139	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofileYIqHMr"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649854163790	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileYIqHMr/search.json.mozlz4", (void 0)))
+1649854164791	Marionette	INFO	Listening on port 40535
+1649854164854	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649854164856	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:37021","noProxy":[],"sslProxy":"127.0.0.1:37021"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+1649854198400	geckodriver	INFO	Listening on 127.0.0.1:38315
+1649854199800	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "start-maximized" "disable-infobars" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilerCXbs7"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649854200450	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilerCXbs7/search.json.mozlz4", (void 0)))
+1649854201577	Marionette	INFO	Listening on port 39109
+1649854201616	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649854201618	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:40733","noProxy":[],"sslProxy":"127.0.0.1:40733"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649854955867	geckodriver	INFO	Listening on 127.0.0.1:56057
+1649854957269	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilejoCwvx"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649854957913	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejoCwvx/search.json.mozlz4", (void 0)))
+1649854958913	Marionette	INFO	Listening on port 39483
+1649854959008	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649854959011	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:45995","noProxy":[],"sslProxy":"127.0.0.1:45995"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649855071162	geckodriver	INFO	Listening on 127.0.0.1:51705
+1649855071568	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofileznZC0R"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649855072233	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileznZC0R/search.json.mozlz4", (void 0)))
+1649855073298	Marionette	INFO	Listening on port 44793
+1649855073391	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649855073393	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:42767","noProxy":[],"sslProxy":"127.0.0.1:42767"}
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649914543644	geckodriver	INFO	Listening on 127.0.0.1:51803
+1649914544653	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileK7BCDY"
+*** You are running in headless mode.
+1649914545270	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileK7BCDY/search.json.mozlz4", (void 0)))
+1649914546303	Marionette	INFO	Listening on port 42155
+1649914546371	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649914546373	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33489","noProxy":[],"sslProxy":"127.0.0.1:33489"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649915044360	geckodriver	INFO	Listening on 127.0.0.1:55629
+1649915044362	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofile57j8Em"
+*** You are running in headless mode.
+1649915044810	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile57j8Em/search.json.mozlz4", (void 0)))
+1649915045674	Marionette	INFO	Listening on port 33497
+1649915045780	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649915045782	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:40009","noProxy":[],"sslProxy":"127.0.0.1:40009"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649915094727	geckodriver	INFO	Listening on 127.0.0.1:56043
+1649915094729	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofileHwG25i"
+*** You are running in headless mode.
+1649915095103	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHwG25i/search.json.mozlz4", (void 0)))
+1649915095947	Marionette	INFO	Listening on port 42223
+1649915096051	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649915096053	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:32973","noProxy":[],"sslProxy":"127.0.0.1:32973"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649915218198	geckodriver	INFO	Listening on 127.0.0.1:38725
+1649915218200	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--disable-extensions" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-headless" "-no-remote" "-profile" "/tmp/rust_mozprofilej8t0U6"
+*** You are running in headless mode.
+1649915218588	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilej8t0U6/search.json.mozlz4", (void 0)))
+1649915219474	Marionette	INFO	Listening on port 35681
+1649915219529	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649915219533	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:46109","noProxy":[],"sslProxy":"127.0.0.1:46109"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649915741601	geckodriver	INFO	Listening on 127.0.0.1:38117
+1649915742027	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofile8INe2g"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649915742702	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile8INe2g/search.json.mozlz4", (void 0)))
+1649915743686	Marionette	INFO	Listening on port 36407
+1649915743771	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649915743775	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:38717","noProxy":[],"sslProxy":"127.0.0.1:38717"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649916431185	geckodriver	INFO	Listening on 127.0.0.1:43653
+1649916432585	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofiley6Olzh"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649916433243	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofiley6Olzh/search.json.mozlz4", (void 0)))
+1649916434519	Marionette	INFO	Listening on port 38793
+1649916434628	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649916434631	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:41247","noProxy":[],"sslProxy":"127.0.0.1:41247"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649916451145	geckodriver	INFO	Listening on 127.0.0.1:48689
+1649916451542	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilehIQq3q"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649916452230	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilehIQq3q/search.json.mozlz4", (void 0)))
+1649916453267	Marionette	INFO	Listening on port 46805
+1649916453370	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649916453373	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:39515","noProxy":[],"sslProxy":"127.0.0.1:39515"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649917338216	geckodriver	INFO	Listening on 127.0.0.1:47967
+1649917338690	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilehvLYC9"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649917339493	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilehvLYC9/search.json.mozlz4", (void 0)))
+1649917340486	Marionette	INFO	Listening on port 35907
+1649917340509	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649917340511	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33695","noProxy":[],"sslProxy":"127.0.0.1:33695"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649917714231	geckodriver	INFO	Listening on 127.0.0.1:44533
+1649917715255	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofile69Hm24"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649917715834	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile69Hm24/search.json.mozlz4", (void 0)))
+1649917716842	Marionette	INFO	Listening on port 33779
+1649917716882	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649917716884	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:34757","noProxy":[],"sslProxy":"127.0.0.1:34757"}
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649918040895	geckodriver	INFO	Listening on 127.0.0.1:34447
+1649918041289	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofile22GUZw"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649918041989	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile22GUZw/search.json.mozlz4", (void 0)))
+1649918043085	Marionette	INFO	Listening on port 40651
+1649918043105	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649918043107	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:43955","noProxy":[],"sslProxy":"127.0.0.1:43955"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649918136780	geckodriver	INFO	Listening on 127.0.0.1:39373
+1649918137181	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilePyJc5J"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649918137827	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePyJc5J/search.json.mozlz4", (void 0)))
+1649918138772	Marionette	INFO	Listening on port 34587
+1649918138829	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649918138832	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:40667","noProxy":[],"sslProxy":"127.0.0.1:40667"}
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649918360398	geckodriver	INFO	Listening on 127.0.0.1:34143
+1649918360787	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilePOyUPE"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649918361430	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilePOyUPE/search.json.mozlz4", (void 0)))
+1649918362474	Marionette	INFO	Listening on port 37713
+1649918362509	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649918362512	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:35363","noProxy":[],"sslProxy":"127.0.0.1:35363"}
+console.warn: "Already started legacy listener for root-node on server0.conn0.windowGlobal8589934593/windowGlobalTarget2"
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649918466313	geckodriver	INFO	Listening on 127.0.0.1:51465
+1649918466721	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilep7xDAq"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649918467371	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilep7xDAq/search.json.mozlz4", (void 0)))
+1649918468358	Marionette	INFO	Listening on port 40963
+1649918468443	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649918468446	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:33735","noProxy":[],"sslProxy":"127.0.0.1:33735"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649918509089	geckodriver	INFO	Listening on 127.0.0.1:57971
+1649918509498	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofile4SHfp7"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649918510167	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofile4SHfp7/search.json.mozlz4", (void 0)))
+1649918511202	Marionette	INFO	Listening on port 35209
+1649918511318	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649918511322	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:38857","noProxy":[],"sslProxy":"127.0.0.1:38857"}
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://3f6b6d64-f8d8-4b46-a022-deae2ba32714/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://3f6b6d64-f8d8-4b46-a022-deae2ba32714/js/vapi.js'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649918869415	geckodriver	INFO	Listening on 127.0.0.1:57955
+1649918869816	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofilexgTlZ6"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649918870476	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilexgTlZ6/search.json.mozlz4", (void 0)))
+1649918871483	Marionette	INFO	Listening on port 37249
+1649918871531	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649918871533	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:34673","noProxy":[],"sslProxy":"127.0.0.1:34673"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649918915915	geckodriver	INFO	Listening on 127.0.0.1:55295
+1649918916349	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "-no-remote" "-profile" "/tmp/rust_mozprofileC210Fj"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649918917056	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileC210Fj/search.json.mozlz4", (void 0)))
+1649918918160	Marionette	INFO	Listening on port 41323
+1649918918267	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649918918269	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:36859","noProxy":[],"sslProxy":"127.0.0.1:36859"}
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://6962f964-5855-4810-a9ea-016d55ba2d8d/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://6962f964-5855-4810-a9ea-016d55ba2d8d/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://6962f964-5855-4810-a9ea-016d55ba2d8d/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://6962f964-5855-4810-a9ea-016d55ba2d8d/js/vapi.js'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://6962f964-5855-4810-a9ea-016d55ba2d8d/js/vapi.js'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://6962f964-5855-4810-a9ea-016d55ba2d8d/js/vapi.js'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649919188661	geckodriver	INFO	Listening on 127.0.0.1:53605
+1649919189054	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "--ignore-certificate-errors" "-no-remote" "-profile" "/tmp/rust_mozprofilek3noCY"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649919189699	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilek3noCY/search.json.mozlz4", (void 0)))
+1649919190757	Marionette	INFO	Listening on port 40909
+1649919190795	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649919190800	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:36611","noProxy":[],"sslProxy":"127.0.0.1:36611"}
+JavaScript error: resource://devtools/client/framework/devtools.js, line 787: TypeError: inspector.inspectorFront is undefined
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649919223542	geckodriver	INFO	Listening on 127.0.0.1:45523
+1649919223932	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--ignore-certificate-errors" "-no-remote" "-profile" "/tmp/rust_mozprofilenevg2F"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649919224592	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilenevg2F/search.json.mozlz4", (void 0)))
+1649919225574	Marionette	INFO	Listening on port 43917
+1649919225657	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649919225659	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:37059","noProxy":[],"sslProxy":"127.0.0.1:37059"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649919494646	geckodriver	INFO	Listening on 127.0.0.1:54945
+1649919495050	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileKnTuOd"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649919495701	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileKnTuOd/search.json.mozlz4", (void 0)))
+1649919496701	Marionette	INFO	Listening on port 41691
+1649919496774	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649919496778	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:43915","noProxy":[],"sslProxy":"127.0.0.1:43915"}
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649919510494	geckodriver	INFO	Listening on 127.0.0.1:56409
+1649919511922	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofilepP6ydy"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649919512558	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilepP6ydy/search.json.mozlz4", (void 0)))
+1649919513543	Marionette	INFO	Listening on port 34297
+1649919513648	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649919513651	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:46713","noProxy":[],"sslProxy":"127.0.0.1:46713"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649919693208	geckodriver	INFO	Listening on 127.0.0.1:57949
+1649919693602	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileY3zfqO"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649919694245	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileY3zfqO/search.json.mozlz4", (void 0)))
+1649919695271	Marionette	INFO	Listening on port 45635
+1649919695343	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649919695346	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:42161","noProxy":[],"sslProxy":"127.0.0.1:42161"}
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649919701463	geckodriver	INFO	Listening on 127.0.0.1:38579
+1649919701861	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileVMn1sk"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649919702527	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileVMn1sk/search.json.mozlz4", (void 0)))
+1649919703626	Marionette	INFO	Listening on port 43849
+1649919703675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649919703677	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:43835","noProxy":[],"sslProxy":"127.0.0.1:43835"}
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://9aa386bd-f618-46e8-8c8c-f319a36e5b8e/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://9aa386bd-f618-46e8-8c8c-f319a36e5b8e/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://9aa386bd-f618-46e8-8c8c-f319a36e5b8e/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://9aa386bd-f618-46e8-8c8c-f319a36e5b8e/js/vapi.js'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://9aa386bd-f618-46e8-8c8c-f319a36e5b8e/js/vapi.js'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://9aa386bd-f618-46e8-8c8c-f319a36e5b8e/js/vapi.js'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649919828222	geckodriver	INFO	Listening on 127.0.0.1:41589
+1649919828618	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileEfW3tS"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649919829259	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileEfW3tS/search.json.mozlz4", (void 0)))
+1649919830299	Marionette	INFO	Listening on port 43049
+1649919830333	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1649919830335	RemoteAgent	INFO	Proxy settings initialised: {"proxyType":"manual","httpProxy":"127.0.0.1:34187","noProxy":[],"sslProxy":"127.0.0.1:34187"}
+JavaScript error: resource://devtools/client/framework/devtools.js, line 787: TypeError: inspector is undefined
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://71af3e38-c357-415a-bdad-8e1da0aaba6b/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://71af3e38-c357-415a-bdad-8e1da0aaba6b/js/vapi.js'
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://71af3e38-c357-415a-bdad-8e1da0aaba6b/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://71af3e38-c357-415a-bdad-8e1da0aaba6b/js/vapi.js'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649920300587	geckodriver	INFO	Listening on 127.0.0.1:58869
+1649920300972	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "47929" "-no-remote" "-profile" "/tmp/rust_mozprofileDVNiae"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649920301620	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileDVNiae/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:47929/devtools/browser/39965aaf-84d3-4a36-bb0e-9895e93360c0
+1649920302593	Marionette	INFO	Listening on port 46099
+1649920302698	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://ca421d35-de6f-4bb1-af94-f22bd34f5432/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://ca421d35-de6f-4bb1-af94-f22bd34f5432/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://ca421d35-de6f-4bb1-af94-f22bd34f5432/js/vapi.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 670"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:670:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:516:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2118:35
+addAllSources@resource://devtools/server/actors/thread.js:1479:14
+watch@resource://devtools/server/actors/resources/sources.js:62:17
+watchResources@resource://devtools/server/actors/resources/index.js:242:19
+_watchTargetResources@resource://devtools/server/actors/targets/target-actor-mixin.js:161:24
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:53:20
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:556:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.jsm:465:21
+Line: 670, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://ca421d35-de6f-4bb1-af94-f22bd34f5432/js/vapi.js'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://ca421d35-de6f-4bb1-af94-f22bd34f5432/js/vapi.js'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 670: Failed to open input source 'moz-extension://ca421d35-de6f-4bb1-af94-f22bd34f5432/js/vapi.js'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1649920896159	geckodriver	INFO	Listening on 127.0.0.1:37973
+1649920896555	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--start-maximized" "--disable-extensions" "--disable-features=NetworkService" "--no-sandbox" "--disable-application-cache" "--disable-gpu" "--disable-dev-shm-usage" "--ignore-certificate-errors" "--remote-debugging-port" "53827" "-no-remote" "-profile" "/tmp/rust_mozprofilevsDuW8"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1649920897206	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilevsDuW8/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:53827/devtools/browser/1afa0e26-9e7e-4277-905b-89d19b66cfce
+1649920898266	Marionette	INFO	Listening on port 38535
+1649920898370	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

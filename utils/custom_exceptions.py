@@ -6,3 +6,7 @@ class ProxyError(Exception):
 class ValidationError(Exception):
     def __init__(self, text):
         self.text = text
+
+
+class ServerError(Exception):
+    pass

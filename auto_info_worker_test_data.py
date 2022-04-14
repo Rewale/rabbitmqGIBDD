@@ -3,10 +3,12 @@ import signal
 import sys
 import uuid
 from datetime import datetime
+from time import sleep
 
 import pika
 from selenium.common.exceptions import TimeoutException, UnexpectedAlertPresentException
 
+import test_data
 from api_lib.sync_api import ApiSync
 from api_lib.utils.messages import IncomingMessage
 from parsers import BotParser
@@ -22,8 +24,16 @@ def parse(vin_code: str, method: str = 'all'):
 
     vin_code = vin_code.strip()
     try:
-        data_from_parser = parser.parse_data(vin_code, method)
-        return data_from_parser['data'], data_from_parser['result'] == 'Success'
+        sleep(5)
+        if method == 'registration_history':
+            return test_data.test_parse_registation_histoty, True
+        elif method == 'restrictions_history':
+            return test_data.test_parse_restriction_history, True
+        elif method == 'wanted_history':
+            return test_data.test_parse_wanted_history , True
+        else:
+            return {"error": f"Метод {method} не поддерживается"}, False
+
     except (UnexpectedAlertPresentException, RuntimeError):
         requests_logger.error('[ERROR] Proxy error')
         return {'error': 'proxy error'}, False
@@ -47,17 +57,16 @@ def check_info(message: IncomingMessage):
 
     response = parse(vin_code=vin_code, method=method_parse)
     requests_logger.info(f" [Server] response(%s) {WORKER_UUID=}" % (response,))
-    parser.clear_page()
+    # parser.clear_page()
     requests_logger.info(f" [Server] cleaned page! {WORKER_UUID=}")
     return message.callback_message(response[0], response[1])
 
 
 if __name__ == '__main__':
     WORKER_UUID = uuid.uuid4()
-    requests_logger.info(f'[INIT] Начало инициализации парсера {WORKER_UUID=}')
+    requests_logger.info(f'[TEST] Начало инициализации парсера {WORKER_UUID=}')
     # Запускаем экземпляр селениума один раз
-    parser = BotParser(WORKER_UUID)
-    requests_logger.info(f'[INIT] Конец инициализации парсера {WORKER_UUID=}')
+    # parser = BotParser(WORKER_UUID)
     api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API,
                   service_name="GIBDDPROGR",
                   methods={'check_info': check_info})

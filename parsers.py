@@ -49,6 +49,7 @@ import utils
 from settings import URL as URL, english_names, ITERATIONS, SEARCH_LIMIT_SEC, FILES_1C
 from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
 from utils.loggers import parser_logger
+from utils.parser_fabric import create_driver
 from utils.system_utils import get_script_dir
 from utils.work_with_proxy import read_proxy_json
 
@@ -62,9 +63,9 @@ IMAGES_BASE_URL = 'http://192.168.0.200:8010/gibdd/api/v1/images/'
 BAD_VIN_LIST = ['Сначала нужно ввести идентификационный номер транспортного средства (VIN)',
                 'Введите VIN, номер кузова или номер шасси.']
 
-is_screen = False
-SAVE_PATH = get_script_dir()+'/%s'
-SCREENSHOTS_SAVE_PATH = SAVE_PATH+'/screenshots'
+is_screen = True
+SAVE_PATH = get_script_dir() + '/%s'
+SCREENSHOTS_SAVE_PATH = SAVE_PATH + '/screenshots'
 
 
 class BotParser:
@@ -84,45 +85,7 @@ class BotParser:
         self.code = None
         self.parser_method = None
 
-        # путь для расширений Firefox
-        extensions_path = '/home/kolchanovaa/Рабочий стол/parsers/' \
-                          'parsers_gibdd_rabbitMQ/utils/firefox_addons/ublock_origin.xpi'
-
-        # юзер агент и прокси
-        user_agent = UserAgent().firefox
-        # self.proxy_list = read_proxy_json(PROXY_PATH, PROXY_TYPE, PROXY_API)
-        # self.proxy = choice(self.proxy_list)
-        # test_proxy(self.proxy, self.URL)
-
-        options = webdriver.FirefoxOptions()
-        # options.add_argument("start-maximized")
-        # options.add_argument("disable-infobars")
-        # options.add_argument("--disable-extensions")
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-application-cache')
-        options.add_argument('--disable-gpu')
-        options.add_argument("--disable-dev-shm-usage")
-        options.headless = True
-
-        profile = webdriver.FirefoxProfile()
-        profile.add_extension(extension=extensions_path)
-        # self.driver.install_addon(f'{extensions_path}ublock_origin.xpi',)
-        # настройки для seleniumwire
-        sw_options = {
-            # 'proxy': {
-            #     'http': self.proxy,
-            #     'https': self.proxy.replace('http', 'https')
-            # },
-            'user-agent': {
-                user_agent,
-            },
-        }
-        self.driver = webdriver.Firefox(options=options, seleniumwire_options=sw_options, firefox_profile=profile)
-        # self.driver = webdriver.Firefox()#seleniumwire_options=options)
-        self.driver.set_page_load_timeout(40)
-
-        self.driver.install_addon(f'{extensions_path}', )
-        self.driver.set_window_size(1200, 1200)
+        self.driver = create_driver()
         self.driver.get(URL)
 
         if is_screen:
@@ -132,7 +95,6 @@ class BotParser:
             os.mkdir(self.screen_path)
             self.make_screenshot('start.png')
             parser_logger.info(f"[INIT] Screen {path=}")
-    #        self.driver.get('http://2ip.ru')
 
     def _remove_interfering_windows(self, numeric=True):
 
@@ -151,7 +113,7 @@ class BotParser:
 
     def make_screenshot(self, file_name):
         if is_screen:
-            self.driver.save_screenshot(self.screen_path+f'/{file_name}.png')
+            self.driver.save_screenshot(self.screen_path + f'/{file_name}.png')
 
     def _send_field_orig(self):
 
@@ -191,11 +153,12 @@ class BotParser:
             return True
         except TimeoutException:
             parser_logger.info("Страница не прогрузилась, повторная отправка VIN кода")
+            # self.clear_page()
             return False
 
     def _send_field(self):
         """Интерфейс для переключения версий методов ввода"""
-        return self._send_field_waits()
+        return self._send_field_orig()
 
     def _save_road_accident_image_api(self, data_block):
 
@@ -215,8 +178,8 @@ class BotParser:
         import base64
 
         parser_logger.info("[ACCIDENT-I] Получение изображений ДТП")
-        filename = str(datetime.datetime.now()).replace(' ','') + '.jpg'
-        url = FILES_1C % (filename, )
+        filename = str(datetime.datetime.now()).replace(' ', '') + '.jpg'
+        url = FILES_1C % (filename,)
         parser_logger.info(f"[ACCIDENT-I] Отправка изображения в сервис {url}")
         image_element = data_block.find_element_by_tag_name('tbody')
         try:
@@ -450,8 +413,7 @@ class BotParser:
         tracing_button.click()
         try:
             # если не найдет - поднимется NoSuchElementException
-            # self.driver.find_element_by_id('registerStatement')
-            reg = WebDriverWait(self.driver, 2.5).until(
+            reg = WebDriverWait(self.driver, 15).until(
                 EC.presence_of_element_located(
                     (By.ID, 'registerStatement')
                 )
@@ -661,7 +623,6 @@ class BotParser:
                 try:
                     result = parent_div.find_element_by_class_name('checkResult')
                     result_text = result.text.strip()
-                    # parser_logger.info(f'[RESTRICTIONS-DATA] Текст: {result_text}')
                     if result_text == '':
                         parser_logger.info("[RESTRICTIONS-DATA]" + \
                                            "Поднятие ошибки NoSuchElementException")
@@ -677,9 +638,6 @@ class BotParser:
                             pass
                         raise NoSuchElementException
 
-                    # all_local_li = result.find_elements_by_tag_name('li')
-                    # return_data = [li.text for li in all_local_li]
-                    # parser_logger.info(f'[RESTRICTIONS-DATA] Данные найдены {return_data}')
                     button_exist = False
 
                     return_data = self._get_template_data(result, restriction=True)
@@ -711,7 +669,7 @@ class BotParser:
         return_data = {'result': 'Success', 'data': {}}
         try:
             if 'registration_history' in self.parser_method or 'all' in self.parser_method:
-                data = self._get_registration_history_webdriver_wait()
+                data = self._get_registration_history()
                 if data == 'Указан некорректный идентификатор транспортного средства (VIN).':
                     return {'result': 'Fail',
                             'data': {'error': 'Invalid vehicle identifier (vin)'}}
@@ -753,7 +711,7 @@ class BotParser:
                     return_data['data']['restrictions_history'] = data4
 
         except RuntimeError:
-            return {'result': 'Fail', 'data': {'error': 'Ко'}}
+            return {'result': 'Fail', 'data': {'error': 'Ошибка заполнения данных'}}
 
         return return_data
 
@@ -765,5 +723,11 @@ class BotParser:
 
     def clear_page(self):
         """Обновляем страницу и очищаем поля (~0.5 секунды)"""
-
-        self.driver.get(URL)
+        # self.driver.get(URL)
+        xpath = '//*[@class="reset-btn"]'
+        try:
+            self.driver.find_element_by_xpath(xpath).click()
+        except ElementNotInteractableException:
+            sleep(1)
+            self.driver.find_element_by_xpath(xpath).click()
+        self.driver.find_element_by_xpath('//*[@id="checkAutoVIN"]').clear()

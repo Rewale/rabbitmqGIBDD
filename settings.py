@@ -3,10 +3,10 @@ import socket
 import utils.system_utils
 
 # API rabbit
-URL_API = ''
-PASS_API = 'guest'
-USER_API = 'guest'
-SERVICE_NAME = 'GIBDDFINESPROGR'
+URL_API = 'http://apidev.mezex.lan/getApiStructProgr'
+PASS_API = ''
+USER_API = ''
+SERVICE_NAME = 'GIBDDPENALTYPROGR'
 
 URL = 'https://гибдд.рф/check/fines#++'
 
@@ -15,8 +15,7 @@ is_screen = False
 
 DOCKER = False
 
-URL_CHECK_AUTO = 'https://xn--90adear.xn--p1ai/check/auto'
-# URL_CHECK_AUTO = "https://google.com/"
+URL_CHECK_AUTO = 'http://xn--90adear.xn--p1ai/check/auto'
 
 URL_FINES = 'https://гибдд.рф/check/fines#++'
 HOST = '127.0.0.1'
@@ -29,15 +28,13 @@ SAVE_FILE_LOG = False
 PORT = 8011
 DEBUG = True
 RELOAD = True
-# ?operation=write&extension=" + Строка(РасширениеФайла + "&author=" + Строка(Автор) + "&typedoc=" + Строка(ВидФайла)
-# + "&filename=" + Строка(ИмяФайла)
 if DEBUG:
     FILES_1C = 'http://192.168.0.7/filesprogr/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
 else:
     FILES_1C = 'http://192.168.0.7/files/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
-ITERATIONS = 15
+ITERATIONS = 30
 
 # лимит поиска результата
 SEARCH_LIMIT_SEC = 20
