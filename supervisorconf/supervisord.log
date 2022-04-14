@@ -1,0 +1,479 @@
+2022-02-16 17:14:37,668 INFO RPC interface 'supervisor' initialized
+2022-02-16 17:14:37,668 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 17:14:37,669 INFO supervisord started with pid 12106
+2022-02-16 17:14:38,673 INFO spawned: '0' with pid 12108
+2022-02-16 17:14:38,674 INFO spawned: '1' with pid 12109
+2022-02-16 17:14:39,832 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:14:39,833 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:17:23,807 WARN received SIGINT indicating exit request
+2022-02-16 17:17:23,807 INFO waiting for 0, 1 to die
+2022-02-16 17:17:23,813 INFO stopped: 0 (terminated by SIGTERM)
+2022-02-16 17:17:23,814 INFO stopped: 1 (terminated by SIGTERM)
+2022-02-16 17:33:05,707 INFO RPC interface 'supervisor' initialized
+2022-02-16 17:33:05,707 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 17:33:05,707 INFO supervisord started with pid 14612
+2022-02-16 17:33:06,711 INFO spawned: '0' with pid 14614
+2022-02-16 17:33:06,715 INFO spawned: '1' with pid 14615
+2022-02-16 17:33:07,882 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:33:07,882 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:33:29,540 WARN received SIGINT indicating exit request
+2022-02-16 17:33:29,541 INFO waiting for 0, 1 to die
+2022-02-16 17:33:29,550 INFO stopped: 0 (terminated by SIGTERM)
+2022-02-16 17:33:29,551 INFO stopped: 1 (terminated by SIGTERM)
+2022-02-16 17:38:48,654 INFO RPC interface 'supervisor' initialized
+2022-02-16 17:38:48,654 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 17:38:48,655 INFO supervisord started with pid 16063
+2022-02-16 17:38:49,659 INFO spawned: '0' with pid 16066
+2022-02-16 17:38:49,661 INFO spawned: '1' with pid 16067
+2022-02-16 17:38:50,820 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:38:50,821 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:39:16,572 WARN received SIGINT indicating exit request
+2022-02-16 17:39:16,572 INFO waiting for 0, 1 to die
+2022-02-16 17:39:19,580 WARN received SIGINT indicating exit request
+2022-02-16 17:39:19,581 INFO waiting for 0, 1 to die
+2022-02-16 17:39:22,585 INFO waiting for 0, 1 to die
+2022-02-16 17:39:25,588 INFO waiting for 0, 1 to die
+2022-02-16 17:39:26,597 WARN killing '0' (16066) with SIGKILL
+2022-02-16 17:39:26,597 WARN killing '1' (16067) with SIGKILL
+2022-02-16 17:39:26,606 INFO stopped: 0 (terminated by SIGKILL)
+2022-02-16 17:39:26,612 INFO stopped: 1 (terminated by SIGKILL)
+2022-02-16 17:41:10,820 INFO RPC interface 'supervisor' initialized
+2022-02-16 17:41:10,820 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 17:41:10,820 INFO supervisord started with pid 17259
+2022-02-16 17:41:11,824 INFO spawned: '0' with pid 17261
+2022-02-16 17:41:11,827 INFO spawned: '1' with pid 17262
+2022-02-16 17:41:12,988 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:41:12,988 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:41:29,187 WARN received SIGINT indicating exit request
+2022-02-16 17:41:29,187 INFO waiting for 0, 1 to die
+2022-02-16 17:41:32,193 INFO waiting for 0, 1 to die
+2022-02-16 17:41:35,197 INFO waiting for 0, 1 to die
+2022-02-16 17:41:38,209 INFO waiting for 0, 1 to die
+2022-02-16 17:41:39,210 WARN killing '0' (17261) with SIGKILL
+2022-02-16 17:41:39,211 WARN killing '1' (17262) with SIGKILL
+2022-02-16 17:41:39,218 INFO stopped: 0 (terminated by SIGKILL)
+2022-02-16 17:41:39,225 INFO stopped: 1 (terminated by SIGKILL)
+2022-02-16 17:43:52,709 INFO RPC interface 'supervisor' initialized
+2022-02-16 17:43:52,709 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 17:43:52,709 INFO supervisord started with pid 18415
+2022-02-16 17:43:53,713 INFO spawned: '0' with pid 18417
+2022-02-16 17:43:53,716 INFO spawned: '1' with pid 18418
+2022-02-16 17:43:54,877 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:43:54,877 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:44:10,288 WARN received SIGINT indicating exit request
+2022-02-16 17:44:10,289 INFO waiting for 0, 1 to die
+2022-02-16 17:44:10,299 INFO stopped: 0 (terminated by SIGTERM)
+2022-02-16 17:44:10,299 INFO stopped: 1 (terminated by SIGTERM)
+2022-02-16 17:47:50,078 INFO RPC interface 'supervisor' initialized
+2022-02-16 17:47:50,078 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 17:47:50,078 INFO supervisord started with pid 19595
+2022-02-16 17:47:51,082 INFO spawned: '0' with pid 19597
+2022-02-16 17:47:51,085 INFO spawned: '1' with pid 19598
+2022-02-16 17:47:52,250 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:47:52,250 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 17:48:07,952 WARN received SIGINT indicating exit request
+2022-02-16 17:48:07,952 INFO waiting for 0, 1 to die
+2022-02-16 17:48:07,963 INFO stopped: 1 (terminated by SIGTERM)
+2022-02-16 17:48:07,963 INFO stopped: 0 (terminated by SIGTERM)
+2022-02-16 18:10:40,913 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:10:40,913 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:10:40,913 INFO supervisord started with pid 24735
+2022-02-16 18:10:41,917 INFO spawned: '0' with pid 24738
+2022-02-16 18:10:41,920 INFO spawned: '1' with pid 24739
+2022-02-16 18:10:43,083 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:10:43,083 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:10:57,236 WARN received SIGINT indicating exit request
+2022-02-16 18:10:57,236 INFO waiting for 0, 1 to die
+2022-02-16 18:11:00,248 INFO waiting for 0, 1 to die
+2022-02-16 18:11:03,252 INFO waiting for 0, 1 to die
+2022-02-16 18:11:06,256 INFO waiting for 0, 1 to die
+2022-02-16 18:11:07,257 WARN killing '0' (24738) with SIGKILL
+2022-02-16 18:11:07,258 WARN killing '1' (24739) with SIGKILL
+2022-02-16 18:11:07,266 INFO stopped: 0 (terminated by SIGKILL)
+2022-02-16 18:11:07,266 INFO stopped: 1 (terminated by SIGKILL)
+2022-02-16 18:13:41,169 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:13:41,169 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:13:41,169 INFO supervisord started with pid 25899
+2022-02-16 18:13:42,173 INFO spawned: '0' with pid 25901
+2022-02-16 18:13:42,177 INFO spawned: '1' with pid 25902
+2022-02-16 18:13:43,338 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:13:43,338 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:14:00,009 WARN received SIGINT indicating exit request
+2022-02-16 18:14:00,010 INFO waiting for 0, 1 to die
+2022-02-16 18:14:00,933 INFO stopped: 1 (exit status 0)
+2022-02-16 18:14:00,957 INFO stopped: 0 (exit status 0)
+2022-02-16 18:22:58,043 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:22:58,043 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:22:58,043 INFO supervisord started with pid 27585
+2022-02-16 18:22:59,046 INFO spawnerr: unknown error making dispatchers for '0': EACCES
+2022-02-16 18:22:59,047 INFO spawnerr: unknown error making dispatchers for '1': EACCES
+2022-02-16 18:23:00,049 INFO spawnerr: unknown error making dispatchers for '0': EACCES
+2022-02-16 18:23:00,051 INFO spawnerr: unknown error making dispatchers for '1': EACCES
+2022-02-16 18:23:02,055 INFO spawnerr: unknown error making dispatchers for '0': EACCES
+2022-02-16 18:23:02,056 INFO spawnerr: unknown error making dispatchers for '1': EACCES
+2022-02-16 18:23:04,059 WARN received SIGINT indicating exit request
+2022-02-16 18:28:21,193 WARN For [program:auto_info_parser], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-02-16 18:28:21,194 WARN For [program:auto_info_parser], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-02-16 18:28:21,197 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:28:21,197 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:28:21,198 INFO supervisord started with pid 28237
+2022-02-16 18:28:22,201 INFO spawned: '0' with pid 28245
+2022-02-16 18:28:22,205 INFO spawned: '1' with pid 28246
+2022-02-16 18:28:23,365 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:28:23,365 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:33:38,522 WARN received SIGINT indicating exit request
+2022-02-16 18:33:38,522 INFO waiting for 0, 1 to die
+2022-02-16 18:33:39,265 INFO stopped: 0 (exit status 0)
+2022-02-16 18:33:39,267 INFO stopped: 1 (exit status 0)
+2022-02-16 18:34:35,702 WARN For [program:auto_info_parser], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-02-16 18:34:35,702 WARN For [program:auto_info_parser], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2022-02-16 18:34:35,704 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:34:35,704 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:34:35,704 INFO supervisord started with pid 31447
+2022-02-16 18:34:36,708 INFO spawned: '0' with pid 31449
+2022-02-16 18:34:36,710 INFO spawned: '1' with pid 31450
+2022-02-16 18:34:37,872 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:34:37,872 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:34:55,835 WARN received SIGINT indicating exit request
+2022-02-16 18:34:55,844 INFO waiting for 0, 1 to die
+2022-02-16 18:34:56,628 INFO stopped: 1 (exit status 0)
+2022-02-16 18:34:56,727 INFO stopped: 0 (exit status 0)
+2022-02-16 18:35:48,829 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:35:48,829 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:35:48,829 INFO supervisord started with pid 32433
+2022-02-16 18:35:49,842 INFO spawned: '0' with pid 32437
+2022-02-16 18:35:49,845 INFO spawned: '1' with pid 32438
+2022-02-16 18:35:51,021 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:35:51,021 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:36:11,515 WARN received SIGINT indicating exit request
+2022-02-16 18:36:11,515 INFO waiting for 0, 1 to die
+2022-02-16 18:36:12,128 INFO stopped: 1 (exit status 0)
+2022-02-16 18:36:12,211 INFO stopped: 0 (exit status 0)
+2022-02-16 18:36:27,260 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:36:27,260 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:36:27,260 INFO supervisord started with pid 33384
+2022-02-16 18:36:28,264 INFO spawned: '0' with pid 33386
+2022-02-16 18:36:28,268 INFO spawned: '1' with pid 33387
+2022-02-16 18:36:29,430 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:36:29,430 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:37:54,523 WARN received SIGINT indicating exit request
+2022-02-16 18:37:54,524 INFO waiting for 0, 1 to die
+2022-02-16 18:37:54,978 INFO stopped: 1 (exit status 0)
+2022-02-16 18:37:55,491 INFO stopped: 0 (exit status 0)
+2022-02-16 18:37:57,677 INFO RPC interface 'supervisor' initialized
+2022-02-16 18:37:57,677 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-16 18:37:57,677 INFO supervisord started with pid 34455
+2022-02-16 18:37:58,682 INFO spawned: '0' with pid 34501
+2022-02-16 18:37:58,684 INFO spawned: '1' with pid 34502
+2022-02-16 18:37:59,850 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:37:59,851 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-16 18:44:37,691 WARN received SIGINT indicating exit request
+2022-02-16 18:44:37,691 INFO waiting for 0, 1 to die
+2022-02-16 18:44:38,359 INFO stopped: 0 (exit status 0)
+2022-02-16 18:44:38,365 INFO stopped: 1 (exit status 0)
+2022-02-17 09:56:24,986 INFO RPC interface 'supervisor' initialized
+2022-02-17 09:56:24,986 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 09:56:24,986 INFO supervisord started with pid 3613
+2022-02-17 09:56:25,998 INFO spawned: '0' with pid 3616
+2022-02-17 09:56:26,001 INFO spawned: '1' with pid 3617
+2022-02-17 09:56:26,265 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 09:56:26,265 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 09:56:27,270 INFO spawned: '0' with pid 3652
+2022-02-17 09:56:27,271 INFO spawned: '1' with pid 3653
+2022-02-17 09:56:27,456 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 09:56:27,460 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 09:56:29,466 INFO spawned: '0' with pid 3663
+2022-02-17 09:56:29,466 INFO spawned: '1' with pid 3664
+2022-02-17 09:56:29,670 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 09:56:29,670 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 09:56:31,672 WARN received SIGINT indicating exit request
+2022-02-17 09:57:53,977 INFO RPC interface 'supervisor' initialized
+2022-02-17 09:57:53,977 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 09:57:53,978 INFO supervisord started with pid 3982
+2022-02-17 09:57:54,982 INFO spawned: '0' with pid 3986
+2022-02-17 09:57:54,984 INFO spawned: '1' with pid 3987
+2022-02-17 09:57:56,597 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 09:57:56,597 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 10:11:18,296 WARN received SIGINT indicating exit request
+2022-02-17 10:11:18,298 INFO waiting for 0, 1 to die
+2022-02-17 10:11:19,094 INFO stopped: 1 (exit status 0)
+2022-02-17 10:11:19,096 INFO stopped: 0 (exit status 0)
+2022-02-17 10:58:24,801 INFO RPC interface 'supervisor' initialized
+2022-02-17 10:58:24,801 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 10:58:24,802 INFO supervisord started with pid 16144
+2022-02-17 10:58:25,804 INFO spawnerr: can't find command '/home/kolchanovaa/Рабочий стол/parsers/parser_gibdd_rabbitMQ/venv/bin/python'
+2022-02-17 10:58:25,805 INFO spawnerr: can't find command '/home/kolchanovaa/Рабочий стол/parsers/parser_gibdd_rabbitMQ/venv/bin/python'
+2022-02-17 10:58:26,814 INFO spawnerr: can't find command '/home/kolchanovaa/Рабочий стол/parsers/parser_gibdd_rabbitMQ/venv/bin/python'
+2022-02-17 10:58:26,815 INFO spawnerr: can't find command '/home/kolchanovaa/Рабочий стол/parsers/parser_gibdd_rabbitMQ/venv/bin/python'
+2022-02-17 10:58:28,818 INFO spawnerr: can't find command '/home/kolchanovaa/Рабочий стол/parsers/parser_gibdd_rabbitMQ/venv/bin/python'
+2022-02-17 10:58:28,819 INFO spawnerr: can't find command '/home/kolchanovaa/Рабочий стол/parsers/parser_gibdd_rabbitMQ/venv/bin/python'
+2022-02-17 10:58:28,819 WARN received SIGINT indicating exit request
+2022-02-17 11:00:14,791 INFO RPC interface 'supervisor' initialized
+2022-02-17 11:00:14,791 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 11:00:14,791 INFO supervisord started with pid 16331
+2022-02-17 11:00:15,794 INFO spawned: '0' with pid 16333
+2022-02-17 11:00:15,796 INFO spawned: '1' with pid 16334
+2022-02-17 11:00:16,141 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:00:16,141 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:00:17,145 INFO spawned: '0' with pid 16340
+2022-02-17 11:00:17,147 INFO spawned: '1' with pid 16341
+2022-02-17 11:00:17,452 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:00:17,452 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:00:19,459 INFO spawned: '0' with pid 16350
+2022-02-17 11:00:19,463 INFO spawned: '1' with pid 16351
+2022-02-17 11:00:19,765 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:00:19,765 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:00:20,767 WARN received SIGINT indicating exit request
+2022-02-17 11:00:42,981 INFO RPC interface 'supervisor' initialized
+2022-02-17 11:00:42,981 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 11:00:42,981 INFO supervisord started with pid 16416
+2022-02-17 11:00:43,985 INFO spawned: '0' with pid 16421
+2022-02-17 11:00:43,988 INFO spawned: '1' with pid 16422
+2022-02-17 11:00:44,357 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:00:44,360 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:00:45,364 INFO spawned: '0' with pid 16445
+2022-02-17 11:00:45,365 INFO spawned: '1' with pid 16446
+2022-02-17 11:00:45,689 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:00:45,689 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:00:47,694 INFO spawned: '0' with pid 16455
+2022-02-17 11:00:47,696 INFO spawned: '1' with pid 16456
+2022-02-17 11:00:48,017 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:00:48,019 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:00:51,025 INFO spawned: '0' with pid 16471
+2022-02-17 11:00:51,029 INFO spawned: '1' with pid 16472
+2022-02-17 11:00:51,328 WARN received SIGINT indicating exit request
+2022-02-17 11:00:51,328 INFO waiting for 0, 1 to die
+2022-02-17 11:00:51,330 INFO stopped: 0 (terminated by SIGTERM)
+2022-02-17 11:00:51,330 INFO stopped: 1 (terminated by SIGTERM)
+2022-02-17 11:01:39,688 INFO RPC interface 'supervisor' initialized
+2022-02-17 11:01:39,688 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 11:01:39,688 INFO supervisord started with pid 16902
+2022-02-17 11:01:40,691 INFO spawned: '0' with pid 16904
+2022-02-17 11:01:40,694 INFO spawned: '1' with pid 16905
+2022-02-17 11:01:41,071 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:01:41,072 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:01:42,076 INFO spawned: '0' with pid 16941
+2022-02-17 11:01:42,079 INFO spawned: '1' with pid 16942
+2022-02-17 11:01:42,495 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:01:42,496 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:01:44,501 INFO spawned: '0' with pid 16953
+2022-02-17 11:01:44,504 INFO spawned: '1' with pid 16954
+2022-02-17 11:01:44,875 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:01:44,875 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:01:46,877 WARN received SIGINT indicating exit request
+2022-02-17 11:04:00,527 INFO RPC interface 'supervisor' initialized
+2022-02-17 11:04:00,534 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 11:04:00,535 INFO supervisord started with pid 17215
+2022-02-17 11:04:01,539 INFO spawned: '0' with pid 17217
+2022-02-17 11:04:01,540 INFO spawned: '1' with pid 17218
+2022-02-17 11:04:01,900 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:04:01,908 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:04:02,910 INFO spawned: '0' with pid 17255
+2022-02-17 11:04:02,911 INFO spawned: '1' with pid 17256
+2022-02-17 11:04:03,320 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:04:03,325 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:04:04,327 WARN received SIGINT indicating exit request
+2022-02-17 11:05:13,923 INFO RPC interface 'supervisor' initialized
+2022-02-17 11:05:13,923 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 11:05:13,923 INFO supervisord started with pid 17386
+2022-02-17 11:05:14,927 INFO spawned: '0' with pid 17389
+2022-02-17 11:05:14,931 INFO spawned: '1' with pid 17390
+2022-02-17 11:05:15,282 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:05:15,282 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:05:16,286 INFO spawned: '0' with pid 17425
+2022-02-17 11:05:16,289 INFO spawned: '1' with pid 17426
+2022-02-17 11:05:16,642 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:05:16,642 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:05:18,647 INFO spawned: '0' with pid 17437
+2022-02-17 11:05:18,649 INFO spawned: '1' with pid 17438
+2022-02-17 11:05:18,649 WARN received SIGINT indicating exit request
+2022-02-17 11:05:18,650 INFO waiting for 0, 1 to die
+2022-02-17 11:05:18,996 INFO stopped: 1 (exit status 1)
+2022-02-17 11:05:18,996 INFO stopped: 0 (exit status 1)
+2022-02-17 11:05:57,583 INFO RPC interface 'supervisor' initialized
+2022-02-17 11:05:57,583 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 11:05:57,583 INFO supervisord started with pid 17530
+2022-02-17 11:05:58,587 INFO spawned: '0' with pid 17534
+2022-02-17 11:05:58,590 INFO spawned: '1' with pid 17537
+2022-02-17 11:05:59,864 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 11:05:59,864 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 11:06:04,600 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:06:04,646 INFO spawned: '0' with pid 18089
+2022-02-17 11:06:04,646 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:06:04,941 INFO spawned: '1' with pid 18092
+2022-02-17 11:06:06,213 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 11:06:06,213 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 11:06:10,344 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 11:06:10,742 INFO spawned: '1' with pid 18629
+2022-02-17 11:06:10,743 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 11:06:11,009 INFO spawned: '0' with pid 18631
+2022-02-17 11:06:12,284 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 11:06:12,284 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 11:06:12,284 WARN received SIGINT indicating exit request
+2022-02-17 11:06:12,284 INFO waiting for 0, 1 to die
+2022-02-17 11:06:12,288 INFO stopped: 0 (terminated by SIGTERM)
+2022-02-17 11:06:12,289 INFO stopped: 1 (terminated by SIGTERM)
+2022-02-17 11:56:36,661 INFO RPC interface 'supervisor' initialized
+2022-02-17 11:56:36,661 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 11:56:36,661 INFO supervisord started with pid 30329
+2022-02-17 11:56:37,663 INFO spawned: '0' with pid 30332
+2022-02-17 11:56:37,665 INFO spawned: '1' with pid 30333
+2022-02-17 11:56:38,819 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 11:56:38,820 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:11:12,717 WARN received SIGINT indicating exit request
+2022-02-17 12:11:12,717 INFO waiting for 0, 1 to die
+2022-02-17 12:11:13,233 INFO stopped: 0 (exit status 0)
+2022-02-17 12:11:13,483 INFO stopped: 1 (exit status 0)
+2022-02-17 12:11:27,629 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:11:27,629 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:11:27,629 INFO supervisord started with pid 36363
+2022-02-17 12:11:28,633 INFO spawned: '0' with pid 36365
+2022-02-17 12:11:28,635 INFO spawned: '1' with pid 36366
+2022-02-17 12:11:29,791 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:11:29,791 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:13:28,363 WARN received SIGINT indicating exit request
+2022-02-17 12:13:28,364 INFO waiting for 0, 1 to die
+2022-02-17 12:13:29,004 INFO stopped: 0 (exit status 0)
+2022-02-17 12:13:29,165 INFO stopped: 1 (exit status 0)
+2022-02-17 12:13:32,096 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:13:32,096 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:13:32,097 INFO supervisord started with pid 37528
+2022-02-17 12:13:33,101 INFO spawned: '0' with pid 37530
+2022-02-17 12:13:33,104 INFO spawned: '1' with pid 37531
+2022-02-17 12:13:34,265 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:13:34,265 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:23:44,370 WARN received SIGINT indicating exit request
+2022-02-17 12:23:44,371 INFO waiting for 0, 1 to die
+2022-02-17 12:23:44,970 INFO stopped: 0 (exit status 0)
+2022-02-17 12:23:45,004 INFO stopped: 1 (exit status 0)
+2022-02-17 12:23:53,234 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:23:53,234 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:23:53,235 INFO supervisord started with pid 42424
+2022-02-17 12:23:54,238 INFO spawned: '0' with pid 42427
+2022-02-17 12:23:54,241 INFO spawned: '1' with pid 42428
+2022-02-17 12:23:55,381 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:23:55,381 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:24:26,177 WARN received SIGINT indicating exit request
+2022-02-17 12:24:26,178 INFO waiting for 0, 1 to die
+2022-02-17 12:24:27,069 INFO stopped: 0 (exit status 0)
+2022-02-17 12:24:27,079 INFO stopped: 1 (exit status 0)
+2022-02-17 12:24:28,378 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:24:28,378 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:24:28,379 INFO supervisord started with pid 43390
+2022-02-17 12:24:29,382 INFO spawned: '0' with pid 43392
+2022-02-17 12:24:29,385 INFO spawned: '1' with pid 43393
+2022-02-17 12:24:30,538 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:24:30,539 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:25:33,742 WARN received SIGINT indicating exit request
+2022-02-17 12:25:33,742 INFO waiting for 0, 1 to die
+2022-02-17 12:25:34,252 INFO stopped: 0 (exit status 0)
+2022-02-17 12:25:34,403 INFO stopped: 1 (exit status 0)
+2022-02-17 12:32:17,917 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:32:17,917 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:32:17,917 INFO supervisord started with pid 45361
+2022-02-17 12:32:18,921 INFO spawned: '0' with pid 45363
+2022-02-17 12:32:18,922 INFO spawned: '1' with pid 45364
+2022-02-17 12:32:20,058 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:32:20,058 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:33:19,014 WARN received SIGINT indicating exit request
+2022-02-17 12:33:19,015 INFO waiting for 0, 1 to die
+2022-02-17 12:33:19,869 INFO stopped: 0 (exit status 0)
+2022-02-17 12:33:19,887 INFO stopped: 1 (exit status 0)
+2022-02-17 12:47:11,798 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:47:11,799 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:47:11,799 INFO supervisord started with pid 47558
+2022-02-17 12:47:12,804 INFO spawned: '0' with pid 47563
+2022-02-17 12:47:12,808 INFO spawned: '1' with pid 47564
+2022-02-17 12:47:13,919 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:47:13,919 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:49:15,931 WARN received SIGINT indicating exit request
+2022-02-17 12:49:15,931 INFO waiting for 0, 1 to die
+2022-02-17 12:49:15,933 INFO stopped: 0 (terminated by SIGTERM)
+2022-02-17 12:49:15,933 INFO stopped: 1 (terminated by SIGTERM)
+2022-02-17 12:55:40,499 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:55:40,499 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:55:40,500 INFO supervisord started with pid 49895
+2022-02-17 12:55:41,503 INFO spawned: '0' with pid 49897
+2022-02-17 12:55:41,506 INFO spawned: '1' with pid 49898
+2022-02-17 12:55:41,644 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 12:55:41,653 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 12:55:42,655 INFO spawned: '0' with pid 49935
+2022-02-17 12:55:42,656 INFO spawned: '1' with pid 49936
+2022-02-17 12:55:42,797 INFO exited: 0 (exit status 1; not expected)
+2022-02-17 12:55:42,797 INFO exited: 1 (exit status 1; not expected)
+2022-02-17 12:55:44,803 INFO spawned: '0' with pid 49945
+2022-02-17 12:55:44,804 INFO spawned: '1' with pid 49946
+2022-02-17 12:55:44,804 WARN received SIGINT indicating exit request
+2022-02-17 12:55:44,804 INFO waiting for 0, 1 to die
+2022-02-17 12:55:44,944 INFO stopped: 0 (exit status 1)
+2022-02-17 12:55:44,944 INFO stopped: 1 (exit status 1)
+2022-02-17 12:57:28,868 INFO RPC interface 'supervisor' initialized
+2022-02-17 12:57:28,869 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 12:57:28,869 INFO supervisord started with pid 50172
+2022-02-17 12:57:29,873 INFO spawned: '0' with pid 50174
+2022-02-17 12:57:29,875 INFO spawned: '1' with pid 50175
+2022-02-17 12:57:30,984 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 12:57:30,984 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 13:04:41,089 WARN received SIGINT indicating exit request
+2022-02-17 13:04:41,090 INFO waiting for 0, 1 to die
+2022-02-17 13:04:41,711 INFO stopped: 1 (exit status 0)
+2022-02-17 13:04:41,915 INFO stopped: 0 (exit status 0)
+2022-02-17 13:04:46,065 INFO RPC interface 'supervisor' initialized
+2022-02-17 13:04:46,065 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-02-17 13:04:46,065 INFO supervisord started with pid 55499
+2022-02-17 13:04:47,070 INFO spawned: '0' with pid 55501
+2022-02-17 13:04:47,072 INFO spawned: '1' with pid 55502
+2022-02-17 13:04:48,184 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 13:04:48,184 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-02-17 13:05:44,798 WARN received SIGINT indicating exit request
+2022-02-17 13:05:44,799 INFO waiting for 0, 1 to die
+2022-02-17 13:05:45,385 INFO stopped: 1 (exit status 0)
+2022-02-17 13:05:45,405 INFO stopped: 0 (exit status 0)
+2022-04-14 14:38:23,987 INFO RPC interface 'supervisor' initialized
+2022-04-14 14:38:23,987 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2022-04-14 14:38:23,988 INFO daemonizing the supervisord process
+2022-04-14 14:38:23,988 INFO supervisord started with pid 47882
+2022-04-14 14:38:24,992 INFO spawned: '0' with pid 47886
+2022-04-14 14:38:24,995 INFO spawned: '1' with pid 47887
+2022-04-14 14:38:26,120 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 14:38:26,120 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 14:47:23,799 INFO waiting for 0 to stop
+2022-04-14 14:47:23,799 INFO waiting for 1 to stop
+2022-04-14 14:47:24,182 INFO stopped: 0 (exit status 0)
+2022-04-14 14:47:24,182 INFO stopped: 1 (exit status 0)
+2022-04-14 15:10:06,040 INFO spawned: '0' with pid 50418
+2022-04-14 15:10:06,041 INFO spawned: '1' with pid 50419
+2022-04-14 15:10:07,206 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:10:07,206 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:10:25,937 INFO waiting for 0 to stop
+2022-04-14 15:10:25,938 INFO waiting for 1 to stop
+2022-04-14 15:10:26,719 INFO stopped: 1 (exit status 0)
+2022-04-14 15:10:26,830 INFO stopped: 0 (exit status 0)
+2022-04-14 15:11:35,595 INFO spawned: '0' with pid 51107
+2022-04-14 15:11:35,597 INFO spawned: '1' with pid 51108
+2022-04-14 15:11:36,716 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:11:36,716 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:11:52,388 INFO waiting for 0 to stop
+2022-04-14 15:11:52,388 INFO waiting for 1 to stop
+2022-04-14 15:11:53,273 INFO stopped: 0 (exit status 0)
+2022-04-14 15:11:53,277 INFO stopped: 1 (exit status 0)
+2022-04-14 15:13:24,709 INFO spawned: '0' with pid 51877
+2022-04-14 15:13:24,711 INFO spawned: '1' with pid 51878
+2022-04-14 15:13:25,835 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:13:25,835 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:13:29,449 INFO waiting for 0 to stop
+2022-04-14 15:13:29,449 INFO waiting for 1 to stop
+2022-04-14 15:13:31,452 INFO waiting for 0 to stop
+2022-04-14 15:13:31,452 INFO waiting for 1 to stop
+2022-04-14 15:13:33,455 INFO waiting for 0 to stop
+2022-04-14 15:13:33,455 INFO waiting for 1 to stop
+2022-04-14 15:13:33,650 INFO stopped: 1 (exit status 0)
+2022-04-14 15:13:34,893 INFO stopped: 0 (exit status 0)
+2022-04-14 15:13:49,850 INFO spawned: '0' with pid 52440
+2022-04-14 15:13:49,854 INFO spawned: '1' with pid 52441
+2022-04-14 15:13:49,865 INFO spawned: '0' with pid 52442
+2022-04-14 15:13:49,867 INFO spawned: '1' with pid 52443
+2022-04-14 15:13:51,011 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:13:51,011 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:13:51,011 INFO success: 0 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2022-04-14 15:13:51,011 INFO success: 1 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

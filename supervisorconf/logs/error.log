@@ -1,0 +1,22 @@
+2022-02-16 18:37:58.846 | INFO     | __main__:<module>:17 - [INIT] Cтарт 2022-02-16 18:37:58.846226
+2022-02-16 18:37:58.846 | INFO     | __main__:<module>:20 - [INIT] Начало инициализации кролика и парсера WORKER_UUID=UUID('63caab81-6f01-4dbd-9ff4-277c43dd34ca')
+2022-02-16 18:37:58.850 | INFO     | __main__:<module>:17 - [INIT] Cтарт 2022-02-16 18:37:58.850247
+2022-02-16 18:37:58.850 | INFO     | __main__:<module>:20 - [INIT] Начало инициализации кролика и парсера WORKER_UUID=UUID('ab62695a-1a19-436f-a102-424df008bd86')
+2022-02-16 18:38:09.227 | INFO     | __main__:<module>:107 - [Server] Awaiting RPC requests
+2022-02-16 18:38:09.247 | INFO     | __main__:<module>:107 - [Server] Awaiting RPC requests
+2022-02-16 18:44:37.691 | INFO     | __main__:exit_gracefully:39 - Kill
+2022-02-16 18:44:37.691 | INFO     | __main__:exit_gracefully:39 - Kill
+[Errno 2] No such file or directory: '/tmp/tmpikvat_pf'
+[Errno 2] No such file or directory: '/tmp/tmpv677a6z7'
+[Errno 2] No such file or directory: '/tmp/tmpkbg1zp2g'
+[Errno 2] No such file or directory: '/tmp/tmpq21qe0qd'
+[Errno 2] No such file or directory: '/tmp/tmptmfxy473'
+[Errno 2] No such file or directory: '/tmp/tmpvmzzh650'
+[Errno 2] No such file or directory: '/tmp/tmp9773n41e'
+[Errno 2] No such file or directory: '/tmp/tmpeefpz5d_'
+[Errno 2] No such file or directory: '/tmp/tmpdl00qhay'
+[Errno 2] No such file or directory: '/tmp/tmpf042v4_s'
+[Errno 2] No such file or directory: '/tmp/tmpr_l5mle4'
+[Errno 2] No such file or directory: '/tmp/tmpzxc0hwik'
+[Errno 2] No such file or directory: '/tmp/tmpdkc4s1i5'
+[Errno 2] No such file or directory: '/tmp/tmp48xy9u0s'

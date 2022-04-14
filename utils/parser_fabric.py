@@ -51,8 +51,7 @@ def _create_driver_only_headless():
 
 def _create_driver_firefox_marionette():
     # путь для расширений Firefox
-    extensions_path = '/home/kolchanovaa/Рабочий стол/parsers/' \
-                      'parsers_gibdd_rabbitMQ/utils/firefox_addons/ublock_origin.xpi'
+    extensions_path = 'firefox_addons/ublock_origin.xpi'
 
     # юзер агент и прокси
     user_agent = UserAgent().firefox

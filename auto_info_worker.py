@@ -26,11 +26,12 @@ def parse(vin_code: str, method: str = 'all'):
         requests_logger.error('[ERROR] Proxy error')
         return {'error': 'proxy error'}, False
     except TimeoutException:
-        return {'error': 'timeout'}, False
+        # TODO: отправлять на retry service
+        return {'error': 'Превышено время ожидания. Повторите попытку позже'}, False
     except Exception as err:
         import traceback
         requests_logger.error(traceback.format_exc())
-        return {'error': f'Parser error {str(datetime.now())}'}, False
+        return {'error': f'Непредвиденная ошибка парсера {str(datetime.now())}'}, False
 
 
 def check_info(message: IncomingMessage):
