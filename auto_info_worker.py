@@ -7,6 +7,7 @@ from datetime import datetime
 import pika
 from selenium.common.exceptions import TimeoutException, UnexpectedAlertPresentException
 
+import utils.loggers
 from api_lib.sync_api import ApiSync
 from api_lib.utils.messages import IncomingMessage
 from parsers import BotParser
@@ -52,7 +53,7 @@ def check_info(message: IncomingMessage):
 
 
 if __name__ == '__main__':
-    WORKER_UUID = uuid.uuid4()
+    WORKER_UUID = utils.loggers.process_name
     requests_logger.info(f'[INIT] Начало инициализации парсера {WORKER_UUID=}')
     # Запускаем экземпляр селениума один раз
     parser = BotParser(WORKER_UUID)
