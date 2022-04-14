@@ -16,54 +16,38 @@
 # импорты с питонячих библиотек
 import datetime
 import os
+import pickle
 import signal
 import sys
 import time
 import uuid
-from pathlib import Path
 from time import sleep
-from random import choice
 
 # импорты со стронних библиотек
 # from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
-from seleniumwire import webdriver
 # from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import (NoSuchElementException,
                                         ElementClickInterceptedException,
-                                        ElementNotInteractableException,
                                         TimeoutException, )
-
 # Ожидания
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver import ActionChains
-
-from fake_useragent import UserAgent
-from seleniumwire import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
 
 # иморт с локальных модулей
-import utils
-from settings import URL as URL, english_names, ITERATIONS, SEARCH_LIMIT_SEC, FILES_1C
-from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
+import settings
+from settings import URL as URL, FILES_1C
+# импорт с локальных модулей
+from settings import URL_CHECK_AUTO as URL, english_names, ITERATIONS, SEARCH_LIMIT_SEC
 from utils.loggers import parser_logger
 from utils.parser_fabric import create_driver
 from utils.system_utils import get_script_dir
-from utils.work_with_proxy import read_proxy_json
-
-# импорт с локальных модулей
-from settings import URL_CHECK_AUTO as URL, english_names, ITERATIONS, SEARCH_LIMIT_SEC
-from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
-from utils.loggers import parser_logger
-from utils.work_with_proxy import read_proxy_json
 
 IMAGES_BASE_URL = 'http://192.168.0.200:8010/gibdd/api/v1/images/'
 BAD_VIN_LIST = ['Сначала нужно ввести идентификационный номер транспортного средства (VIN)',
                 'Введите VIN, номер кузова или номер шасси.']
 
-is_screen = True
+is_screen = settings.IS_SCREEN
 SAVE_PATH = get_script_dir() + '/%s'
 SCREENSHOTS_SAVE_PATH = SAVE_PATH + '/screenshots'
 
@@ -87,6 +71,7 @@ class BotParser:
 
         self.driver = create_driver()
         self.driver.get(URL)
+        self.save_or_load_cookies()
 
         if is_screen:
             path = SAVE_PATH % self.WORKER_UUID
@@ -111,6 +96,17 @@ class BotParser:
             except Exception:
                 pass
 
+    def save_or_load_cookies(self):
+        cookies_path = get_script_dir() + "/cookies_info_parser.pkl"
+        if not os.path.exists(cookies_path):
+            parser_logger.info(f"[SOLC] Сохранены куки на пути {cookies_path}")
+            pickle.dump(self.driver.get_cookies(), open(cookies_path, 'wb'))
+        else:
+            parser_logger.info(f"[SOLC] Загружаем куки с {cookies_path}")
+            cookies = pickle.load(open(cookies_path, "rb"))
+            for cookie in cookies:
+                self.driver.add_cookie(cookie)
+
     def make_screenshot(self, file_name):
         if is_screen:
             self.driver.save_screenshot(self.screen_path + f'/{file_name}.png')
@@ -122,13 +118,16 @@ class BotParser:
         parser_logger.info("Отправка кода в input_field ")
 
         try:
-            input_field = self.driver.find_element_by_id("checkAutoVIN")
+            input_field = WebDriverWait(self.driver, 5).until(
+                EC.presence_of_element_located((By.ID, 'checkAutoVIN'))
+            )
+            # input_field = self.driver.find_element_by_id("")
             input_field.send_keys(self.code)
             parser_logger.info("Ввод VIN кода: %s" % self.code)
             return True
-        except NoSuchElementException:
+        except (NoSuchElementException, TimeoutException):
             parser_logger.info("Страница не прогрузилась, повторная отправка VIN кода")
-            sleep(10)
+            sleep(1)
             try:
                 load_message = self.driver.find_element_by_xpath('//*[contains(text(), "Идет загрузка")]')
                 if load_message:
@@ -723,11 +722,14 @@ class BotParser:
 
     def clear_page(self):
         """Обновляем страницу и очищаем поля (~0.5 секунды)"""
-        # self.driver.get(URL)
-        xpath = '//*[@class="reset-btn"]'
-        try:
-            self.driver.find_element_by_xpath(xpath).click()
-        except ElementNotInteractableException:
-            sleep(1)
-            self.driver.find_element_by_xpath(xpath).click()
-        self.driver.find_element_by_xpath('//*[@id="checkAutoVIN"]').clear()
+        self.driver.get(URL)
+        # xpath = '//*[@class="reset-btn"]'
+        # try:
+        #     self.driver.find_element_by_xpath(xpath).click()
+        # except ElementNotInteractableException:
+        #     sleep(1)
+        #     self.driver.find_element_by_xpath(xpath).click()
+        # self.driver.find_element_by_xpath('//*[@id="checkAutoVIN"]').clear()
+
+    def is_all_buttons_set(self):
+        parent_div = self.driver.find_element_by_id("checkAutoRestricted")

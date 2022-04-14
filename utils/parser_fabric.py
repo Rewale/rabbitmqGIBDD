@@ -75,7 +75,7 @@ def _create_driver_firefox_marionette():
     options.add_argument('--disable-gpu')
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument('--ignore-certificate-errors')
-    # options.headless = True
+    options.headless = True
     profile = webdriver.FirefoxProfile()
     profile.set_preference('network.http.use-cache', False)
     profile.accept_untrusted_certs = True

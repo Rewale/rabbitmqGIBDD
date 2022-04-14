@@ -19,38 +19,19 @@ import os
 import signal
 import sys
 import time
-import uuid
-from pathlib import Path
-from time import sleep
-from random import choice
-import utils.system_utils
 
 # импорты со стронних библиотек
 # from selenium import webdriver
-from selenium.webdriver.support.wait import WebDriverWait
-from seleniumwire import webdriver
 # from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import (NoSuchElementException,
-                                        ElementClickInterceptedException,
-                                        ElementNotInteractableException,
-                                        TimeoutException, )
-
-# Ожидания
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import (TimeoutException, )
 from selenium.webdriver import ActionChains
+# Ожидания
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
-from fake_useragent import UserAgent
-from seleniumwire import webdriver
-
-# импорт с локальных модулей
-# from settings import URL_FINES as URL
-# from settings import PROXY_PATH, PROXY_TYPE, PROXY_API
-# from utils.loggers import parser_logger
-# from utils.work_with_proxy import read_proxy_json
-import utils
+import settings
+import utils.system_utils
 from utils.custom_exceptions import ServerError
 from utils.loggers import parser_logger
 from utils.parser_fabric import create_driver
@@ -60,7 +41,7 @@ URL = 'https://гибдд.рф/check/fines'
 SAVE_PATH = utils.system_utils.get_script_dir()+'/Screenshots/%s'
 SCREENSHOTS_SAVE_PATH = SAVE_PATH
 URL_Refresh = 'https://гибдд.рф/check/fines'
-is_screen = True
+is_screen = settings.IS_SCREEN
 
 
 class BotParserPenalty:
@@ -127,8 +108,8 @@ class BotParserPenalty:
                     for li in all_li:
                         # Крутимся пока не прогрузится текст
                         start_search_text = time.time()
-                        # Устанавливаем лимит на ожидания текса в одну секунду
-                        # TODO убрать велосипед
+                        # Устанавливаем лимит на ожидания текста в одну секунду
+                        # TODO Собственный ЕС
                         while (time.time() - start_search_text) < 1:
                             inner_data = li.find_elements_by_tag_name('span')
                             if len(inner_data[0].text) > 0 and len(inner_data[1].text) > 0:

@@ -34,15 +34,15 @@ def parse(sts, gov_number) -> Tuple[Union[dict, list, str], bool]:
         return {'error': 'proxy error'}, False
     except TimeoutException:
         requests_logger.error('[ERROR] timeout')
-        return {'error': 'timeout'}, False
+        return {'error': 'Превышено время ожидания ответа. Повторите попытку позже'}, False
     except ServerError:
-        requests_logger.error('[ERROR] ошибка сервера')
-        return {'error': 'server error'}, False
+        requests_logger.error('[ERROR] Ошибка сервера. Повторите попытку позже')
+        return {'error': 'Ошибка сервера. Повторите попытку позже'}, False
     except (ValidationGosNumError, ValidationSTSError) as err:
         return {'error': f'{err.text}'}, False
     except Exception as err:
         requests_logger.error(f'Error - {str(err)}')
-        return {'error': f'Parser error {str(datetime.now())}'}, False
+        return {'error': f'Непредвиденная ошибка парсера {str(datetime.now())}'}, False
 
 
 def fines_parse(message: IncomingMessage):

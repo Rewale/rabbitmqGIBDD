@@ -15,8 +15,6 @@ from utils.loggers import requests_logger
 
 
 def parse(vin_code: str, method: str = 'all'):
-    """ Эндпоинт парсинга сайта гибдд """
-
     if vin_code == '':
         return {'error': 'Required parameter is empty'}, False
 

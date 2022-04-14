@@ -39,6 +39,9 @@ ITERATIONS = 30
 # лимит поиска результата
 SEARCH_LIMIT_SEC = 20
 
+# скриншоты ошибок
+IS_SCREEN = True
+
 ALLOWED_IP_LIST = [
     '0.0.0.0',
     '192.168.0.200',
