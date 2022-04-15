@@ -32,13 +32,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 import settings
 import utils.system_utils
-from utils.custom_exceptions import ServerError
+from utils.custom_exceptions import ServerError, ProcessingError
 from utils.loggers import parser_logger
 from utils.parser_fabric import create_driver
 
 URL = 'https://гибдд.рф/check/fines'
 
-SAVE_PATH = utils.system_utils.get_script_dir()+'/Screenshots/%s'
+SAVE_PATH = utils.system_utils.get_script_dir() + '/Screenshots/%s'
 SCREENSHOTS_SAVE_PATH = SAVE_PATH
 URL_Refresh = 'https://гибдд.рф/check/fines'
 is_screen = settings.IS_SCREEN
@@ -46,6 +46,7 @@ is_screen = settings.IS_SCREEN
 
 class BotParserPenalty:
     """  Бот-парсер вся логика парсера лежит тут """
+
     def exit_gracefully(self, *args):
         parser_logger.info(f"[EXIT] Kill {self.WORKER_UUID=}")
         self.driver.quit()
@@ -92,7 +93,7 @@ class BotParserPenalty:
         start = time.time()
 
         # Пытаемся как можно быстрее узнать результат
-        while (time.time() - start) < 10:
+        while (time.time() - start) < 15:
             try:
                 WebDriverWait(self.driver, 0.2).until(
                     EC.presence_of_all_elements_located(
@@ -133,13 +134,18 @@ class BotParserPenalty:
                 pass
         parser_logger.info('[PR] Таймаут парсинга результата')
         # TODO: Если ошибка сервера - попробовать еще раз
+        xpath_processing = '//*[contains(text(), "Выполняется запрос, ждите")]'
         xpath_server_error = '//*[contains(text(), "ошибка сервера")]'
         try:
             self.driver.find_element_by_xpath(xpath_server_error)
             raise ServerError
         except:
-            self.make_screenshot(f'timeout')
-            raise TimeoutException
+            try:
+                self.driver.find_element_by_xpath(xpath_processing)
+                raise ProcessingError
+            except:
+                self.make_screenshot('timeout')
+                raise TimeoutException
 
     def __input_values_and_click_button(self) -> None:
 
@@ -228,7 +234,7 @@ class BotParserPenalty:
 
     def make_screenshot(self, file_name):
         if is_screen:
-            self.driver.save_screenshot(self.screen_path+f'/{file_name}.png')
+            self.driver.save_screenshot(self.screen_path + f'/{file_name}.png')
 
     def clear_page(self):
         # """ Очищаем форму с помощью кнопки, если ее нет перезагружаем страницу"""
@@ -241,4 +247,3 @@ class BotParserPenalty:
         #     self.driver.get(URL_Refresh)
         #     parser_logger.warning("[CP] Обновление формы. Кнопка очистки не найдена!")
         self.driver.get(URL_Refresh)
-

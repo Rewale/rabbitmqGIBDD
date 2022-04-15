@@ -10,3 +10,7 @@ class ValidationError(Exception):
 
 class ServerError(Exception):
     pass
+
+
+class ProcessingError(Exception):
+    pass

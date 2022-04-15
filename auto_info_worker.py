@@ -25,14 +25,13 @@ def parse(vin_code: str, method: str = 'all'):
         return data_from_parser['data'], data_from_parser['result'] == 'Success'
     except (UnexpectedAlertPresentException, RuntimeError):
         requests_logger.error('[ERROR] Proxy error')
-        return {'error': 'proxy error'}, False
+        return {'error': f'Ошибка прокси {WORKER_UUID}'}, False
     except TimeoutException:
-        # TODO: отправлять на retry service
-        return {'error': 'Превышено время ожидания. Повторите попытку позже'}, False
+        return {'error': f'Превышено время ожидания. Повторите попытку позже {WORKER_UUID}'}, False
     except Exception as err:
         import traceback
         requests_logger.error(traceback.format_exc())
-        return {'error': f'Непредвиденная ошибка парсера {str(datetime.now())}'}, False
+        return {'error': f'Непредвиденная ошибка парсера {WORKER_UUID} {str(datetime.now())}'}, False
 
 
 def check_info(message: IncomingMessage):
