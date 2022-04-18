@@ -55,6 +55,7 @@ def check_info(message: IncomingMessage):
         send_to_retry = True
         requests_logger.error(f'[CI] {e}.')
 
+    parser.clear_page()
     if send_to_retry:
         requests_logger.error(f'[CI] Отправка в retryservice')
         json_b64 = decode_b64(message.json())
@@ -62,7 +63,6 @@ def check_info(message: IncomingMessage):
                              requested_service='RETRYSERVICE')
         return
 
-    parser.clear_page()
     requests_logger.info(f" [Server] cleaned page! {WORKER_UUID=}")
     return message.callback_message(response[0], response[1])
 
