@@ -10,7 +10,7 @@ from selenium.common.exceptions import TimeoutException
 from typing import Tuple, Union
 
 import test_data
-from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
+from settings import URL_API, PASS_API, USER_API, SERVICE_NAME_FINES
 from utils.custom_exceptions import ProxyError
 from utils.validations import validate_sts, ValidationGosNumError, validate_gos_num, ValidationSTSError
 from penalty_parser import BotParserPenalty
@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
     # Запускаем экземпляр селениума один раз
     api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API,
-                  service_name=SERVICE_NAME,
+                  service_name=SERVICE_NAME_FINES,
                   methods={'penalty': fines_parse})
 
     api.listen_queue()

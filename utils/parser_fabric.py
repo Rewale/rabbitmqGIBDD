@@ -66,15 +66,16 @@ def _create_driver_firefox_marionette():
     # caps['security.mixed_content.use_hstsc'] = False
 
     options = webdriver.FirefoxOptions()
-    options.add_argument("--start-maximized")
-    options.add_argument("--disable-extensions")
-    options.add_argument("--disable-features=NetworkService")
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-application-cache')
-    options.add_argument('--disable-gpu')
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument('--ignore-certificate-errors')
-    options.headless = True
+    # options.add_argument("--start-maximized")
+    # options.add_argument("--disable-extensions")
+    # options.add_argument("--disable-features=NetworkService")
+    # options.add_argument('--no-sandbox')
+    # options.add_argument('--disable-application-cache')
+    # options.add_argument('--disable-gpu')
+    # options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument('--disable-blink-features=AutomationControlled')
+    # options.add_argument('--ignore-certificate-errors')
+    # options.headless = True
     profile = webdriver.FirefoxProfile()
     profile.set_preference('network.http.use-cache', False)
     profile.accept_untrusted_certs = True

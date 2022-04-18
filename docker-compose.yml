@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  gibdd_supervisord:
+    build: .
+    volumes:
+      - ./logs:/usr/src/app/logs
+    network_mode: 'host'
+
+    environment:
+      - IS_PROD=False
+      - URL_API=123
+      - PASS_API=123
+      - USER_API=123

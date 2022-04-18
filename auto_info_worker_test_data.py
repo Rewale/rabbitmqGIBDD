@@ -12,7 +12,7 @@ import test_data
 from api_lib.sync_api import ApiSync
 from api_lib.utils.messages import IncomingMessage
 from parsers import BotParser
-from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
+from settings import URL_API, PASS_API, USER_API, SERVICE_NAME_FINES
 from utils.loggers import requests_logger
 
 

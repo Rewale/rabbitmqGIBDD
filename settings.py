@@ -1,12 +1,15 @@
-from pathlib import Path
 import socket
-import utils.system_utils
+import os
+from pathlib import Path
 
 # API rabbit
+import utils.loggers
+
 URL_API = 'http://apidev.mezex.lan/getApiStructProgr'
 PASS_API = ''
 USER_API = ''
-SERVICE_NAME = 'GIBDDPENALTYPROGR'
+SERVICE_NAME_FINES = 'GIBDDPENALTY'
+SERVICE_NAME_INFO = 'GIBDD'
 
 URL = 'https://гибдд.рф/check/fines#++'
 
@@ -26,12 +29,17 @@ PROXY_TYPE = 'all-parsers'
 SAVE_FILE_LOG = False
 
 PORT = 8011
-DEBUG = True
+DEBUG = not os.getenv('IS_PROD') == 'True'
+utils.loggers.parser_logger.warning(f'[START] {DEBUG=}')
+utils.loggers.requests_logger.warning(f'[START] {DEBUG=}')
 RELOAD = True
 if DEBUG:
     FILES_1C = 'http://192.168.0.7/filesprogr/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
 else:
+    URL_API = os.getenv('URL_API')
+    PASS_API = os.getenv('PASS_API')
+    USER_API = os.getenv('USER_API')
     FILES_1C = 'http://192.168.0.7/files/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
 ITERATIONS = 30
@@ -40,29 +48,8 @@ ITERATIONS = 30
 SEARCH_LIMIT_SEC = 20
 
 # скриншоты ошибок
-IS_SCREEN = True
+IS_SCREEN = False
 
-ALLOWED_IP_LIST = [
-    '0.0.0.0',
-    '192.168.0.200',
-    '192.168.0.10',
-    '192.168.0.219',
-    '192.168.0.42',
-    '172.22.0.1',
-    '172.24.0.1',
-    '127.0.0.1',
-    '192.168.0.200',
-    '192.168.0.10',
-    '192.168.0.219',
-    '192.168.0.42',
-    '172.25.0.1',
-    '192.168.0.216',
-]
-
-if DOCKER:
-    HOST = '0.0.0.0'
-    extensions_path = str(Path().parent.absolute()) + '/gibdd_parser/firefox_addons/'
-    ALLOWED_IP_LIST.append(str(socket.gethostbyname('cronjobs')))  # автотесты
 
 english_names = {
     'Дата и время происшествия': 'date',

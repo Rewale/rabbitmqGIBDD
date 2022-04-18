@@ -8,7 +8,7 @@ from typing import Tuple, Union
 
 import test_data
 import utils.loggers
-from settings import URL_API, PASS_API, USER_API, SERVICE_NAME
+from settings import URL_API, PASS_API, USER_API, SERVICE_NAME_FINES
 from utils.custom_exceptions import ProxyError, ServerError, ProcessingError
 from utils.validations import validate_sts, ValidationGosNumError, validate_gos_num, ValidationSTSError
 from penalty_parser import BotParserPenalty
@@ -20,6 +20,8 @@ from api_lib.utils.messages import IncomingMessage
 
 def parse(sts, gov_number) -> Tuple[Union[dict, list, str], bool]:
     # Предварительная валидация, запуск парсинга
+    # TODO: отправка на сервис ретрай
+    # TODO: убрать прогр
     try:
         validate_sts(sts)
         validate_gos_num(gov_number)
@@ -30,8 +32,6 @@ def parse(sts, gov_number) -> Tuple[Union[dict, list, str], bool]:
         return data, True
     except ProxyError:
         requests_logger.error('[ERROR] Proxy error')
-        # message_text = 'Парсер ГИБДД\n Прокси не работают'
-        # send_message(message_text)
         return {'error': 'proxy error'}, False
     except (TimeoutException, ProcessingError):
         requests_logger.error('[ERROR] timeout')
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     # Запускаем экземпляр селениума один раз
     parser_penalty = BotParserPenalty(WORKER_UUID)
     api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API,
-                  service_name=SERVICE_NAME,
+                  service_name=SERVICE_NAME_FINES,
                   methods={'penalty': fines_parse})
 
     api.listen_queue()
