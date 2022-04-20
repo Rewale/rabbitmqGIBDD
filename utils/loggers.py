@@ -8,7 +8,8 @@ import os
 
 process_name = os.getenv('SUPERVISOR_PROCESS_NAME')
 if process_name:
-    os.mkdir(process_name)
+    if not os.path.isdir(process_name):
+        os.mkdir(process_name)
     logger.add(f'logs/{process_name}/{process_name}_parser.log',
                format="[{time} {level} {message}",
                filter=lambda record: "parser_logger" in record["extra"],
