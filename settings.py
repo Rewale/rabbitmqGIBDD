@@ -15,7 +15,6 @@ URL = 'https://гибдд.рф/check/fines#++'
 
 URL_Refresh = 'https://гибдд.рф/check/fines'
 is_screen = False
-
 DOCKER = False
 
 URL_CHECK_AUTO = 'http://xn--90adear.xn--p1ai/check/auto'
