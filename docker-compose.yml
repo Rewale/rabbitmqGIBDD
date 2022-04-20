@@ -3,7 +3,7 @@ services:
   gibdd_rabbit_supervisord:
     build: .
     volumes:
-      - /home/kolchanovaa/logs_gibdd:/usr/src/app/logs
+      - ./logs:/usr/src/app/logs
     network_mode: 'host'
 
     environment:
