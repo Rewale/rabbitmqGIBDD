@@ -1,3 +1,5 @@
+import os
+
 from fake_useragent import UserAgent
 from selenium import webdriver
 from seleniumwire import webdriver
@@ -53,7 +55,8 @@ def _create_driver_only_headless():
 
 def _create_driver_firefox_marionette():
     # путь для расширений Firefox
-    extensions_path = 'firefox_addons/ublock_origin.xpi'
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    extensions_path = dir_path+'/firefox_addons/ublock_origin.xpi'
 
     # юзер агент и прокси
     user_agent = UserAgent().firefox

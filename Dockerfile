@@ -31,13 +31,6 @@ WORKDIR /$APP_HOME
 
 COPY . $APP_HOME/
 
-RUN pip3 install setuptools-rust
-RUN pip3 install -r req.txt
-RUN pip3 install selenium-wire
-RUN pip3 install selenium
-RUN pip install -U selenium
-RUN pip3 install pyvirtualdisplay
-
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 ENV PYTHONUNBUFFERED=1

@@ -81,6 +81,7 @@ if __name__ == '__main__':
     requests_logger.info(f'[INIT] Начало инициализации парсера {WORKER_UUID}')
     # Запускаем экземпляр селениума один раз
     parser_penalty = BotParserPenalty(WORKER_UUID)
+    requests_logger.info(f'[INIT] Конец инициализации парсера {WORKER_UUID}')
     api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API,
                   service_name=SERVICE_NAME_FINES,
                   methods={'penalty': fines_parse})
