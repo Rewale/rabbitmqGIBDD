@@ -160,9 +160,7 @@ class BotParser:
         return self._send_field_orig()
 
     def _save_road_accident_image_api(self, data_block):
-
         """ Сохраняет изображение """
-
         parser_logger.info("[ACCIDENT-I] Получение изображений ДТП")
         save_path = str(uuid.uuid4()) + '.jpg'
         parser_logger.info("[ACCIDENT-I] Путь сохранения: ./dtp_images/{save_path}")
@@ -171,8 +169,7 @@ class BotParser:
         return IMAGES_BASE_URL + save_path
 
     def _save_road_accident_image_1c(self, data_block):
-
-        """ Сохраняет изображение """
+        """ Сохраняет изображение в файловый сервис """
         import requests
         import base64
 
