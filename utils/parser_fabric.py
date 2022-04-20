@@ -1,7 +1,9 @@
 from fake_useragent import UserAgent
 from selenium import webdriver
 from seleniumwire import webdriver
-from utils import system_utils
+
+import settings
+from utils import system_utils, work_with_proxy
 
 
 def create_driver():
@@ -78,22 +80,28 @@ def _create_driver_firefox_marionette():
     profile.set_preference("javascript.enabled", True)
     profile.set_preference("security.mixed_content.use_hstsc", False)
     profile.add_extension(extension=extensions_path)
-    # настройки для seleniumwire
-    sw_options = {
-        # 'proxy': {
-        #     'http': self.proxy,
-        #     'https': self.proxy.replace('http', 'https')
-        # },
-        'user-agent': {
-            user_agent,
-        },
-    }
+    if settings.PROXY_API:
+        proxy = work_with_proxy.get_proxy_from_api(settings.PROXY_TYPE)
+        # настройки для seleniumwire
+        sw_options = {
+            'proxy': {
+                'http': proxy,
+                'https': proxy.replace('http', 'https')
+            },
+            'user-agent': {
+                user_agent,
+            },
+        }
+    else:
+        sw_options = {
+            'user-agent': {
+                user_agent,
+            },
+        }
     driver = webdriver.Firefox(options=options,
                                seleniumwire_options=sw_options,
                                desired_capabilities=caps,
                                firefox_profile=profile)
-    # self.driver = webdriver.Firefox()#seleniumwire_options=options)
-    # self.driver.set_page_load_timeout(40)
 
     driver.install_addon(f'{extensions_path}')
     driver.set_window_size(1200, 1200)
