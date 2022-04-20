@@ -36,7 +36,7 @@ from utils.custom_exceptions import ServerError, ProcessingError
 from utils.loggers import parser_logger
 from utils.parser_fabric import create_driver
 
-URL = 'https://гибдд.рф/check/fines'
+URL = 'https://xn--90adear.xn--p1ai/check/fines'
 
 SAVE_PATH = utils.system_utils.get_script_dir() + '/Screenshots/%s'
 SCREENSHOTS_SAVE_PATH = SAVE_PATH
@@ -93,7 +93,7 @@ class BotParserPenalty:
         start = time.time()
 
         # Пытаемся как можно быстрее узнать результат
-        while (time.time() - start) < 15:
+        while (time.time() - start) < 30:
             try:
                 WebDriverWait(self.driver, 0.2).until(
                     EC.presence_of_all_elements_located(

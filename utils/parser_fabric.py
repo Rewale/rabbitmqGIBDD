@@ -1,7 +1,6 @@
 import os
 
 from fake_useragent import UserAgent
-from selenium import webdriver
 from seleniumwire import webdriver
 
 import settings
