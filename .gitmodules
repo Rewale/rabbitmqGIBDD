@@ -1,3 +1,3 @@
 [submodule "api_lib"]
 	path = api_lib
-	url = git@github.com:Rewale/api_lib.git
+	url = ssh://git@git.mezex.lan:222/kolchanovaa/api_lib.git
