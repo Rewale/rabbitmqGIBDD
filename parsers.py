@@ -71,7 +71,6 @@ class BotParser:
 
         self.driver = create_driver()
         self.driver.get(URL)
-        self.save_or_load_cookies()
 
         if is_screen:
             path = SAVE_PATH % self.WORKER_UUID
