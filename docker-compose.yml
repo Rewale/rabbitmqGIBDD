@@ -11,3 +11,4 @@ services:
       - URL_API=123
       - PASS_API=123
       - USER_API=123
+      - USE_PROXY=False

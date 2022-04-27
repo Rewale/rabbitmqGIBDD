@@ -36,6 +36,7 @@ if DEBUG:
     FILES_1C = 'http://192.168.0.7/filesprogr/index.php?operation=write' \
                '&extension=png&author=parserGIBDD&typedoc=2&filename=%s'
 else:
+    PROXY_API = os.getenv('USE_PROXY') == "True"
     URL_API = os.getenv('URL_API')
     PASS_API = os.getenv('PASS_API')
     USER_API = os.getenv('USER_API')
