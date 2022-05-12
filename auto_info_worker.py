@@ -75,6 +75,6 @@ if __name__ == '__main__':
     requests_logger.info(f'[INIT] Конец инициализации парсера {WORKER_UUID=}')
     api = ApiSync(url=URL_API, pass_api=PASS_API, user_api=USER_API,
                   service_name=settings.SERVICE_NAME_INFO,
-                  methods={'check_info': check_info}, is_test=settings.DEBUG)
+                  methods={'check_info': check_info}, is_test=settings.DEBUG, heartbeat=200)
 
     api.listen_queue()
