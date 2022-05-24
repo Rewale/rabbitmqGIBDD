@@ -24,7 +24,6 @@ def validate_sts(sts: str) -> bool:
     sts = sts.replace(' ', '')
     if len(sts) != 10:
         raise ValidationSTSError('Длина СТС должна быть 10 символов!')
-    print(sts)
     # 3 и 4 символ могут быть буквами русского алфавита
     # остальные всегда числа
     if not sts[2].isnumeric() and sts[2].lower() not in get_russian_abc() \
