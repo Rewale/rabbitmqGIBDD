@@ -52,6 +52,14 @@ SAVE_PATH = get_script_dir() + '/%s'
 SCREENSHOTS_SAVE_PATH = SAVE_PATH + '/screenshots'
 
 
+class IncorrectVIN(Exception):
+    pass
+
+
+class NotFoundVIN(Exception):
+    pass
+
+
 class BotParser:
     """  Бот-парсер вся логика парсера лежит тут """
 
@@ -666,42 +674,50 @@ class BotParser:
             if 'registration_history' in self.parser_method or 'all' in self.parser_method:
                 data = self._get_registration_history()
                 if data == 'Указан некорректный идентификатор транспортного средства (VIN).':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    raise IncorrectVIN
                 if data == 'По указанному VIN не найдена информация о регистрации транспортного средства.':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    raise NotFoundVIN
                 else:
                     return_data['data']['registration_history'] = data
             if 'road_accident_history' in self.parser_method or 'all' in self.parser_method:
                 data2 = self._get_road_accident_history()
                 if data2 == 'Указан некорректный идентификатор транспортного средства (VIN).':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    raise IncorrectVIN
                 if data2 == 'По указанному VIN не найдена информация о регистрации транспортного средства.':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    raise NotFoundVIN
                 else:
                     return_data['data']['road_accident_history'] = data2
             if 'wanted_history' in self.parser_method or 'all' in self.parser_method:
                 data3 = self._get_tracing_history()
                 if data3 == 'Указан некорректный идентификатор транспортного средства (VIN).':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    raise IncorrectVIN
                 if data3 == 'По указанному VIN не найдена информация о регистрации транспортного средства.':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    raise NotFoundVIN
                 else:
                     return_data['data']['wanted_history'] = data3
 
             if 'restrictions_history' in self.parser_method or 'all' in self.parser_method:
                 data4 = self._get_restrictions_history()
                 if data4 == 'Указан некорректный идентификатор транспортного средства (VIN).':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Invalid vehicle identifier (vin)'}}
+                    raise IncorrectVIN
                 if data4 == 'По указанному VIN не найдена информация о регистрации транспортного средства.':
-                    return {'result': 'Fail',
-                            'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    # return {'result': 'Fail',
+                    #         'data': {'error': 'Not find vehicle identifier (vin)'}}
+                    raise NotFoundVIN
                 else:
                     return_data['data']['restrictions_history'] = data4
 
@@ -719,13 +735,6 @@ class BotParser:
     def clear_page(self):
         """Обновляем страницу и очищаем поля (~0.5 секунды)"""
         self.driver.get(URL)
-        # xpath = '//*[@class="reset-btn"]'
-        # try:
-        #     self.driver.find_element_by_xpath(xpath).click()
-        # except ElementNotInteractableException:
-        #     sleep(1)
-        #     self.driver.find_element_by_xpath(xpath).click()
-        # self.driver.find_element_by_xpath('//*[@id="checkAutoVIN"]').clear()
 
     def is_all_buttons_set(self):
         parent_div = self.driver.find_element_by_id("checkAutoRestricted")
