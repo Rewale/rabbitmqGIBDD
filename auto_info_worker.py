@@ -33,11 +33,11 @@ def check_info(message: IncomingMessage):
         requests_logger.info(f" [Server] response(%s) {WORKER_UUID=}" % (response,))
         send_to_retry = not response[1]
     except NotFoundVIN:
-        error_message = f'По VIN {vin_code} не найдена информация о регистрации транспортного средства.'
-        return message.callback_message(error_message, False)
+        error_message = {'error': f'По VIN {vin_code} не найдена информация о регистрации транспортного средства.'}
+        response = (error_message, False)
     except IncorrectVIN:
-        error_message = f'VIN {vin_code} некорректный'
-        return message.callback_message(error_message, False)
+        error_message = {'error': f'VIN {vin_code} некорректный.'}
+        response = (error_message, False)
     except Exception as e:
         send_to_retry = True
         requests_logger.error(f'[CI] {e}.')
