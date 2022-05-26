@@ -17,8 +17,10 @@ def parse(sts, gov_number) -> Tuple[Union[dict, list, str], bool]:
     validate_sts(sts)
     validate_gos_num(gov_number)
     requests_logger.info(f"[INIT] Запрос {gov_number=} {sts=}")
-    data = parser_penalty.parse_data(sts=sts, gov_number=gov_number)
-    parser_penalty.clear_page()
+    try:
+        data = parser_penalty.parse_data(sts=sts, gov_number=gov_number)
+    finally:
+        parser_penalty.clear_page()
     requests_logger.info(f" [Server] cleaned page! {WORKER_UUID}")
     if not data:
         return {'error': 'not found'}, False
