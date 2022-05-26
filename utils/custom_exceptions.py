@@ -14,3 +14,7 @@ class ServerError(Exception):
 
 class ProcessingError(Exception):
     pass
+
+
+class NotFoundSTS(Exception):
+    pass

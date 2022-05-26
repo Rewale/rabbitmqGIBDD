@@ -1,18 +1,3 @@
-"""
------------------------------------------------------------------
-
-  В модуле хранится парсер
-
------------------------------------------------------------------
-
-  Классы и функции:
-
-  BotParser - парсер
-  get_data - интерфейс для взаимодейсвтия с парсером
-
-------------------------------------------------------------------
-"""
-
 # импорты с питонячих библиотек
 import datetime
 import os
@@ -20,9 +5,7 @@ import signal
 import sys
 import time
 
-# импорты со стронних библиотек
-# from selenium import webdriver
-# from selenium.webdriver.common.action_chains import ActionChains
+# импорты со сторонних библиотек
 from selenium.common.exceptions import (TimeoutException, )
 from selenium.webdriver import ActionChains
 # Ожидания
@@ -32,7 +15,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 import settings
 import utils.system_utils
-from utils.custom_exceptions import ServerError, ProcessingError
+from utils.custom_exceptions import ServerError, ProcessingError, NotFoundSTS
 from utils.loggers import parser_logger
 from utils.parser_fabric import create_driver
 
@@ -52,15 +35,7 @@ class BotParserPenalty:
         self.driver.quit()
         sys.exit(0)
 
-    def __init__(self, WORKER_UUID, option: bool = True, available_proxy=None):
-
-        """
-        Инициализация данных, где:
-
-         * gov_number - государственный номер автомобиля.
-         * sts - номер свидетельства о регистрации.
-        """
-
+    def __init__(self, WORKER_UUID):
         # Очистка памяти при выходе
         signal.signal(signal.SIGINT, self.exit_gracefully)
         signal.signal(signal.SIGTERM, self.exit_gracefully)
@@ -70,7 +45,6 @@ class BotParserPenalty:
         self.sts_number = None
         self.gov_number = None
         self.parses_uuid = WORKER_UUID
-        self.busy = False
 
         self.driver = create_driver()
         self.driver.get(URL)
@@ -88,12 +62,13 @@ class BotParserPenalty:
 
         """ Парсит результат """
         xpath_not_found = '//*[@id="checkFines"]/p[contains(@class, "check-space check-message")]/p'
-
+        xpath_not_found_sts = '//*[contains(text(), "Не найдено ТС с таким сочетанием СТС и ГРЗ")]'
         parser_logger.info('[PR] Начало парсинга результата')
         start = time.time()
 
         # Пытаемся как можно быстрее узнать результат
         while (time.time() - start) < 30:
+            # Штрафы найдены
             try:
                 WebDriverWait(self.driver, 0.2).until(
                     EC.presence_of_all_elements_located(
@@ -110,7 +85,6 @@ class BotParserPenalty:
                         # Крутимся пока не прогрузится текст
                         start_search_text = time.time()
                         # Устанавливаем лимит на ожидания текста в одну секунду
-                        # TODO Собственный ЕС
                         while (time.time() - start_search_text) < 1:
                             inner_data = li.find_elements_by_tag_name('span')
                             if len(inner_data[0].text) > 0 and len(inner_data[1].text) > 0:
@@ -124,7 +98,15 @@ class BotParserPenalty:
                 return result
             except TimeoutException:
                 pass
-
+            # Не найдено ТС с таким сочетанием СТС и ГРЗ
+            try:
+                WebDriverWait(self.driver, 0.2).until(
+                    EC.presence_of_element_located((By.XPATH, xpath_not_found_sts))
+                )
+                raise NotFoundSTS
+            except TimeoutException:
+                pass
+            # Штрафы не найдены
             try:
                 elem = WebDriverWait(self.driver, 0.2).until(
                     EC.presence_of_element_located((By.XPATH, xpath_not_found))
@@ -132,8 +114,16 @@ class BotParserPenalty:
                 return elem.text
             except TimeoutException:
                 pass
+            # Повторное Нажатие кнопки поиска
+            try:
+                search_button = WebDriverWait(self.driver, 0.2).until(
+                    EC.element_to_be_clickable((By.XPATH, '//*[contains(text(), "запросить проверку")]')))
+
+                ActionChains(self.driver).move_to_element(search_button).click().perform()
+                parser_logger.info(f'[PR] Повторное нажатие на кнопку поиска')
+            except Exception:
+                pass
         parser_logger.info('[PR] Таймаут парсинга результата')
-        # TODO: Если ошибка сервера - попробовать еще раз
         xpath_processing = '//*[contains(text(), "Выполняется запрос, ждите")]'
         xpath_server_error = '//*[contains(text(), "ошибка сервера")]'
         try:
@@ -162,7 +152,7 @@ class BotParserPenalty:
             )
             number_field.send_keys(number)
         except TimeoutException:
-            parser_logger.warning('Бесконечная загрузка')
+            parser_logger.warning('[IC] Бесконечная загрузка')
             load_message = self.driver.find_element_by_xpath('//*[contains(text(), "Идет загрузка")]')
             if is_screen:
                 self.make_screenshot('find_errors')
@@ -177,22 +167,17 @@ class BotParserPenalty:
                 number_field.send_keys(number)
 
         parser_logger.info(f'[IC] Поле региона {self.parses_uuid=}')
-        # region_field = self.driver.find_element_by_id('checkFinesRegreg')
         region_field = WebDriverWait(self.driver, 2).until(
             EC.presence_of_element_located((By.ID, "checkFinesRegreg"))
         )
         region_field.send_keys(region)
 
         parser_logger.info(f'[IC] Поле свидетельства о регистрации {self.parses_uuid=}')
-        # sts_field = self.driver.find_element_by_id('checkFinesStsnum')
         sts_field = WebDriverWait(self.driver, 2).until(
             EC.presence_of_element_located((By.ID, "checkFinesStsnum")))
         sts_field.send_keys(self.sts_number)
 
-        # sleep(2)
         parser_logger.info(f'[IC] Нажатие на кнопку поиска {self.parses_uuid=}')
-        # search_button = self.driver. \
-        #     find_element_by_xpath('//*[contains(text(), "запросить проверку")]')
 
         self.make_screenshot(f'button{datetime.datetime.now()}.png')
         search_button = WebDriverWait(self.driver, 2).until(
@@ -200,17 +185,13 @@ class BotParserPenalty:
 
         parser_logger.info(f'[IC] Найдена кнопка поиска {str(search_button)}')
         ActionChains(self.driver).move_to_element(search_button).click().perform()
-        # ActionChains(self.driver).click(search_button).perform()
 
     def parse_data(self, gov_number, sts) -> list:
-        self.busy = True
+        """ Парсит штрафы """
         self.gov_number = gov_number
         self.sts_number = sts
         parser_logger.info(f"[INIT] GOV_NUM: {gov_number}, STS: {sts} {self.parses_uuid=}")
-        """ Парсит штрафы """
-        from time import time as ttime
 
-        time_start = ttime()
         self.__input_values_and_click_button()
         result = self.__parse_result()
 
@@ -221,15 +202,10 @@ class BotParserPenalty:
             result.append('not found')
 
         self.make_screenshot('return_result')
-        # result.append({"name": "time spend on parsing", "value": str(ttime()-time_start)})
-        # parser_logger.info(f"[PD] Конец парсинга. Возврат значения {result=}")
-        self.busy = False
         return result
 
     def __del__(self):
-
         """ При удалении экземпляра класса закрывает соединение с selenium """
-
         self.driver.quit()
 
     def make_screenshot(self, file_name):
@@ -237,13 +213,4 @@ class BotParserPenalty:
             self.driver.save_screenshot(self.screen_path + f'/{file_name}.png')
 
     def clear_page(self):
-        # """ Очищаем форму с помощью кнопки, если ее нет перезагружаем страницу"""
-        # try:
-        #     clear_form = WebDriverWait(self.driver, 0.2).until(
-        #         EC.element_to_be_clickable((By.XPATH, '//*[contains(text(), "очистить форму")]')))
-        #     clear_form.click()
-        #     parser_logger.info("[CP] Очистка формы")
-        # except TimeoutException:
-        #     self.driver.get(URL_Refresh)
-        #     parser_logger.warning("[CP] Обновление формы. Кнопка очистки не найдена!")
         self.driver.get(URL_Refresh)
