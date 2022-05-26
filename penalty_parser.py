@@ -115,14 +115,14 @@ class BotParserPenalty:
             except TimeoutException:
                 pass
             # Повторное Нажатие кнопки поиска
-            try:
-                search_button = WebDriverWait(self.driver, 0.2).until(
-                    EC.element_to_be_clickable((By.XPATH, '//*[contains(text(), "запросить проверку")]')))
-
-                ActionChains(self.driver).move_to_element(search_button).click().perform()
-                parser_logger.info(f'[PR] Повторное нажатие на кнопку поиска')
-            except Exception:
-                pass
+            # try:
+            #     search_button = WebDriverWait(self.driver, 0.2).until(
+            #         EC.element_to_be_clickable((By.XPATH, '//*[contains(text(), "запросить проверку")]')))
+            #
+            #     ActionChains(self.driver).move_to_element(search_button).click().perform()
+            #     parser_logger.info(f'[PR] Повторное нажатие на кнопку поиска')
+            # except Exception:
+            #     pass
         parser_logger.info('[PR] Таймаут парсинга результата')
         xpath_processing = '//*[contains(text(), "Выполняется запрос, ждите")]'
         xpath_server_error = '//*[contains(text(), "ошибка сервера")]'
